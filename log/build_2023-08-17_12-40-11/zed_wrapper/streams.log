@@ -1,0 +1,101 @@
+[0.009s] Invoking command in '/home/song/zed/build/zed_wrapper': AMENT_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:/home/song/ros-zed/install/zed_ros2:/home/song/ros-zed/install/zed_wrapper:/home/song/ros-zed/install/zed_components:/home/song/ros-zed/install/zed_interfaces:/home/song/ros-zed/install/image_common:/home/song/ros-zed/install/image_transport:/home/song/ros-zed/install/camera_info_manager:/home/song/ros-zed/install/camera_calibration_parsers:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/song/zed/install/zed_components/lib:/home/song/zed/install/zed_interfaces/lib:/home/song/zed/install/image_transport/lib:/home/song/ros-zed/install/zed_components/lib:/home/song/ros-zed/install/zed_interfaces/lib:/home/song/ros-zed/install/image_transport/lib:/home/song/ros-zed/install/camera_info_manager/lib:/home/song/ros-zed/install/camera_calibration_parsers/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.8/lib64 PYTHONPATH=/home/song/zed/install/zed_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /home/song/.local/bin/cmake /home/song/zed/src/zed-ros2-wrapper/zed_wrapper -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/song/zed/install/zed_wrapper
+[0.049s] -- The C compiler identification is GNU 9.4.0
+[0.079s] -- The CXX compiler identification is GNU 9.4.0
+[0.085s] -- Detecting C compiler ABI info
+[0.117s] -- Detecting C compiler ABI info - done
+[0.123s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.123s] -- Detecting C compile features
+[0.123s] -- Detecting C compile features - done
+[0.125s] -- Detecting CXX compiler ABI info
+[0.163s] -- Detecting CXX compiler ABI info - done
+[0.169s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.169s] -- Detecting CXX compile features
+[0.169s] -- Detecting CXX compile features - done
+[0.173s] -- Looking for sgemm_
+[0.204s] -- Looking for sgemm_ - not found
+[0.205s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.238s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.238s] -- Looking for pthread_create in pthreads
+[0.264s] -- Looking for pthread_create in pthreads - not found
+[0.264s] -- Looking for pthread_create in pthread
+[0.296s] -- Looking for pthread_create in pthread - found
+[0.297s] -- Found Threads: TRUE  
+[0.324s] -- Looking for sgemm_
+[0.371s] -- Looking for sgemm_ - found
+[0.371s] -- Found BLAS: /usr/lib/x86_64-linux-gnu/libopenblas.so  
+[0.384s] -- Found CUDA: /usr/local/cuda-11.8 (found suitable version "11.8", minimum required is "11") 
+[0.403s] -- Found CUDA: /usr/local/cuda-11.8 (found version "11.8") 
+[0.404s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[0.422s] -- Found PythonInterp: /home/song/anaconda3/bin/python3 (found suitable version "3.9.13", minimum required is "3") 
+[0.422s] -- Using PYTHON_EXECUTABLE: /home/song/anaconda3/bin/python3
+[0.540s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.615s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.618s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.660s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.677s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.722s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.754s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.755s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.146s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[1.148s] -- Found Eigen3: TRUE (found version "3.3.7") 
+[1.750s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.000s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.001s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.001s] -- Configured cppcheck include dirs: /home/song/zed/src/zed-ros2-wrapper/zed_wrapper/src
+[2.001s] -- Configured cppcheck exclude dirs and/or files: 
+[2.001s] -- Added test 'lint_cmake' to check CMake code style
+[2.002s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.003s] -- Added test 'uncrustify' to check C / C++ code style
+[2.003s] -- Configured uncrustify additional arguments: 
+[2.003s] -- Added test 'xmllint' to check XML markup files
+[2.004s] -- Configuring done (2.0s)
+[2.022s] -- Generating done (0.0s)
+[2.023s] -- Build files have been written to: /home/song/zed/build/zed_wrapper
+[2.033s] Invoked command in '/home/song/zed/build/zed_wrapper' returned '0': AMENT_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:/home/song/ros-zed/install/zed_ros2:/home/song/ros-zed/install/zed_wrapper:/home/song/ros-zed/install/zed_components:/home/song/ros-zed/install/zed_interfaces:/home/song/ros-zed/install/image_common:/home/song/ros-zed/install/image_transport:/home/song/ros-zed/install/camera_info_manager:/home/song/ros-zed/install/camera_calibration_parsers:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/song/zed/install/zed_components/lib:/home/song/zed/install/zed_interfaces/lib:/home/song/zed/install/image_transport/lib:/home/song/ros-zed/install/zed_components/lib:/home/song/ros-zed/install/zed_interfaces/lib:/home/song/ros-zed/install/image_transport/lib:/home/song/ros-zed/install/camera_info_manager/lib:/home/song/ros-zed/install/camera_calibration_parsers/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.8/lib64 PYTHONPATH=/home/song/zed/install/zed_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /home/song/.local/bin/cmake /home/song/zed/src/zed-ros2-wrapper/zed_wrapper -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/song/zed/install/zed_wrapper
+[2.035s] Invoking command in '/home/song/zed/build/zed_wrapper': AMENT_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:/home/song/ros-zed/install/zed_ros2:/home/song/ros-zed/install/zed_wrapper:/home/song/ros-zed/install/zed_components:/home/song/ros-zed/install/zed_interfaces:/home/song/ros-zed/install/image_common:/home/song/ros-zed/install/image_transport:/home/song/ros-zed/install/camera_info_manager:/home/song/ros-zed/install/camera_calibration_parsers:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/song/zed/install/zed_components/lib:/home/song/zed/install/zed_interfaces/lib:/home/song/zed/install/image_transport/lib:/home/song/ros-zed/install/zed_components/lib:/home/song/ros-zed/install/zed_interfaces/lib:/home/song/ros-zed/install/image_transport/lib:/home/song/ros-zed/install/camera_info_manager/lib:/home/song/ros-zed/install/camera_calibration_parsers/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.8/lib64 PYTHONPATH=/home/song/zed/install/zed_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /home/song/.local/bin/cmake --build /home/song/zed/build/zed_wrapper -- -j20 -l20
+[2.062s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_wrapper.dir/src/zed_wrapper.cpp.o[0m
+[2.771s] In file included from [01m[K/home/song/zed/install/zed_components/include/zed_components/zed_camera_component.hpp:19[m[K,
+[2.771s]                  from [01m[K/home/song/zed/src/zed-ros2-wrapper/zed_wrapper/src/zed_wrapper.cpp:17[m[K:
+[2.771s] [01m[K/usr/local/zed/include/sl/Fusion.hpp:68:64:[m[K [01;36m[Knote: [m[K#pragma message: ~ FUSION SDK is distributed in Early Access ~
+[2.771s]    68 | #pragma message("~ FUSION SDK is distributed in Early Access ~"[01;36m[K)[m[K
+[2.771s]       |                                                                [01;36m[K^[m[K
+[3.735s] [100%] [32m[1mLinking CXX executable zed_wrapper[0m
+[3.865s] [100%] Built target zed_wrapper
+[3.871s] Invoked command in '/home/song/zed/build/zed_wrapper' returned '0': AMENT_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:/home/song/ros-zed/install/zed_ros2:/home/song/ros-zed/install/zed_wrapper:/home/song/ros-zed/install/zed_components:/home/song/ros-zed/install/zed_interfaces:/home/song/ros-zed/install/image_common:/home/song/ros-zed/install/image_transport:/home/song/ros-zed/install/camera_info_manager:/home/song/ros-zed/install/camera_calibration_parsers:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/song/zed/install/zed_components/lib:/home/song/zed/install/zed_interfaces/lib:/home/song/zed/install/image_transport/lib:/home/song/ros-zed/install/zed_components/lib:/home/song/ros-zed/install/zed_interfaces/lib:/home/song/ros-zed/install/image_transport/lib:/home/song/ros-zed/install/camera_info_manager/lib:/home/song/ros-zed/install/camera_calibration_parsers/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.8/lib64 PYTHONPATH=/home/song/zed/install/zed_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /home/song/.local/bin/cmake --build /home/song/zed/build/zed_wrapper -- -j20 -l20
+[3.898s] Invoking command in '/home/song/zed/build/zed_wrapper': AMENT_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:/home/song/ros-zed/install/zed_ros2:/home/song/ros-zed/install/zed_wrapper:/home/song/ros-zed/install/zed_components:/home/song/ros-zed/install/zed_interfaces:/home/song/ros-zed/install/image_common:/home/song/ros-zed/install/image_transport:/home/song/ros-zed/install/camera_info_manager:/home/song/ros-zed/install/camera_calibration_parsers:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/song/zed/install/zed_components/lib:/home/song/zed/install/zed_interfaces/lib:/home/song/zed/install/image_transport/lib:/home/song/ros-zed/install/zed_components/lib:/home/song/ros-zed/install/zed_interfaces/lib:/home/song/ros-zed/install/image_transport/lib:/home/song/ros-zed/install/camera_info_manager/lib:/home/song/ros-zed/install/camera_calibration_parsers/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.8/lib64 PYTHONPATH=/home/song/zed/install/zed_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /home/song/.local/bin/cmake --install /home/song/zed/build/zed_wrapper
+[3.912s] -- Install configuration: "Release"
+[3.913s] -- Execute custom install script
+[3.913s] -- Symlinking: /home/song/zed/install/zed_wrapper/lib/zed_wrapper/zed_wrapper
+[3.915s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/config/common.yaml
+[3.916s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/config/zed.yaml
+[3.917s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/config/zed2.yaml
+[3.919s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/config/zed2i.yaml
+[3.920s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/config/zedm.yaml
+[3.922s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/config/zedx.yaml
+[3.923s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/config/zedxm.yaml
+[3.924s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/urdf/include/materials.urdf.xacro
+[3.926s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/urdf/zed_descr.urdf.xacro
+[3.927s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/urdf/zed_macro.urdf.xacro
+[3.929s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/launch/include/zed_camera.launch.py
+[3.930s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/launch/zed.launch.py
+[3.931s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/launch/zed2.launch.py
+[3.933s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/launch/zed2i.launch.py
+[3.934s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/launch/zedm.launch.py
+[3.935s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/launch/zedx.launch.py
+[3.937s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/launch/zedxm.launch.py
+[3.938s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/ament_index/resource_index/package_run_dependencies/zed_wrapper
+[3.939s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/ament_index/resource_index/parent_prefix_path/zed_wrapper
+[3.941s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.sh
+[3.942s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/environment/ament_prefix_path.dsv
+[3.944s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/environment/path.sh
+[3.945s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/environment/path.dsv
+[3.946s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/local_setup.bash
+[3.948s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/local_setup.sh
+[3.949s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/local_setup.zsh
+[3.950s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/local_setup.dsv
+[3.952s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/package.dsv
+[3.953s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/ament_index/resource_index/packages/zed_wrapper
+[3.955s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig.cmake
+[3.956s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/cmake/zed_wrapperConfig-version.cmake
+[3.957s] -- Symlinking: /home/song/zed/install/zed_wrapper/share/zed_wrapper/package.xml
+[3.963s] Invoked command in '/home/song/zed/build/zed_wrapper' returned '0': AMENT_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/song/zed/install/zed_components:/home/song/zed/install/zed_interfaces:/home/song/zed/install/image_transport:/home/song/ros-zed/install/zed_ros2:/home/song/ros-zed/install/zed_wrapper:/home/song/ros-zed/install/zed_components:/home/song/ros-zed/install/zed_interfaces:/home/song/ros-zed/install/image_common:/home/song/ros-zed/install/image_transport:/home/song/ros-zed/install/camera_info_manager:/home/song/ros-zed/install/camera_calibration_parsers:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) LD_LIBRARY_PATH=/home/song/zed/install/zed_components/lib:/home/song/zed/install/zed_interfaces/lib:/home/song/zed/install/image_transport/lib:/home/song/ros-zed/install/zed_components/lib:/home/song/ros-zed/install/zed_interfaces/lib:/home/song/ros-zed/install/image_transport/lib:/home/song/ros-zed/install/camera_info_manager/lib:/home/song/ros-zed/install/camera_calibration_parsers/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.8/lib64 PYTHONPATH=/home/song/zed/install/zed_interfaces/lib/python3.9/site-packages:${PYTHONPATH} /home/song/.local/bin/cmake --install /home/song/zed/build/zed_wrapper

@@ -1,0 +1,6 @@
+[0.034s] Invoking command in '/home/song/steadylab/build/camera_calibration_parsers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/steadylab/build/camera_calibration_parsers -- -j20 -l20
+[0.167s] [0mCMake Error: The current CMakeCache.txt directory /home/song/steadylab/build/camera_calibration_parsers/CMakeCache.txt is different than the directory /home/song/zed/build/camera_calibration_parsers where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.167s] [0mCMake Error: The source directory "/home/song/zed/src/image_common/camera_calibration_parsers" does not exist.
+[0.167s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.167s] make: *** [Makefile:472: cmake_check_build_system] 오류 1
+[0.171s] Invoked command in '/home/song/steadylab/build/camera_calibration_parsers' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/steadylab/build/camera_calibration_parsers -- -j20 -l20

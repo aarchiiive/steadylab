@@ -1,0 +1,3 @@
+/home/song/steadylab/install/rviz_plugin_zed_od/lib/librviz_plugin_zed_od.so
+/home/song/steadylab/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/cmake/rviz_plugin_zed_odExport.cmake
+/home/song/steadylab/install/rviz_plugin_zed_od/share/rviz_plugin_zed_od/cmake/rviz_plugin_zed_odExport-noconfig.cmake

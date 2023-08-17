@@ -1,0 +1,136 @@
+[0.040s] Invoking command in '/home/song/zed/build/zed_topic_benchmark_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake /home/song/zed/src/zed-ros2-examples/tools/zed_benchmark_interfaces -DCMAKE_INSTALL_PREFIX=/home/song/zed/install/zed_topic_benchmark_interfaces
+[0.194s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[0.194s] -- Found PythonInterp: /home/song/anaconda3/bin/python3 (found suitable version "3.9.13", minimum required is "3") 
+[0.194s] -- Using PYTHON_EXECUTABLE: /home/song/anaconda3/bin/python3
+[0.246s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.337s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.340s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.445s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.493s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.540s] -- Found PythonInterp: /home/song/anaconda3/bin/python3 (found version "3.9.13") 
+[0.630s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[0.751s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.789s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.810s] -- Found PythonInterp: /home/song/anaconda3/bin/python3 (found suitable version "3.9.13", minimum required is "3.5") 
+[0.811s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[0.834s] -- Using PYTHON_EXECUTABLE: /home/song/anaconda3/bin/python3
+[0.834s] -- Using PYTHON_INCLUDE_DIRS: /home/song/anaconda3/include/python3.9
+[0.834s] -- Using PYTHON_LIBRARIES: /home/song/anaconda3/lib/libpython3.9.so
+[0.864s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.864s] -- Added test 'lint_cmake' to check CMake code style
+[0.864s] -- Added test 'xmllint' to check XML markup files
+[0.870s] -- Configuring done (0.8s)
+[0.909s] [33mCMake Warning at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:235 (add_library):
+[0.910s]   Cannot generate a safe runtime search path for target
+[0.910s]   zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.910s]   because files in some directories may conflict with libraries in implicit
+[0.910s]   directories:
+[0.910s] 
+[0.910s]     runtime library [libssl.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+[0.910s]       /home/song/anaconda3/lib
+[0.910s]     runtime library [libcrypto.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+[0.910s]       /home/song/anaconda3/lib
+[0.910s] 
+[0.910s]   Some of these libraries may not be found correctly.
+[0.911s] Call Stack (most recent call first):
+[0.911s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[0.911s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[0.911s]   CMakeLists.txt:80 (rosidl_generate_interfaces)
+[0.911s] 
+[0.911s] [0m
+[0.924s] -- Generating done (0.0s)
+[0.927s] -- Build files have been written to: /home/song/zed/build/zed_topic_benchmark_interfaces
+[0.943s] Invoked command in '/home/song/zed/build/zed_topic_benchmark_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake /home/song/zed/src/zed-ros2-examples/tools/zed_benchmark_interfaces -DCMAKE_INSTALL_PREFIX=/home/song/zed/install/zed_topic_benchmark_interfaces
+[0.944s] Invoking command in '/home/song/zed/build/zed_topic_benchmark_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/zed/build/zed_topic_benchmark_interfaces -- -j20 -l20
+[0.976s] [  3%] Built target zed_topic_benchmark_interfaces__cpp
+[0.983s] [ 12%] Built target zed_topic_benchmark_interfaces__rosidl_generator_c
+[0.985s] [ 22%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.987s] [ 32%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_cpp
+[0.987s] [ 41%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_cpp
+[0.992s] [ 51%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_c
+[0.992s] [ 61%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_c
+[0.994s] [ 70%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_c
+[1.001s] [ 70%] Built target zed_topic_benchmark_interfaces
+[1.007s] [ 74%] Built target zed_topic_benchmark_interfaces__py
+[1.015s] [ 80%] Built target zed_topic_benchmark_interfaces__python
+[1.024s] [ 87%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.024s] [ 93%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.027s] [100%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_c__pyext
+[1.033s] Invoked command in '/home/song/zed/build/zed_topic_benchmark_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/zed/build/zed_topic_benchmark_interfaces -- -j20 -l20
+[1.087s] Invoking command in '/home/song/zed/build/zed_topic_benchmark_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --install /home/song/zed/build/zed_topic_benchmark_interfaces
+[1.105s] -- Install configuration: "Release"
+[1.105s] -- Execute custom install script
+[1.105s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/ament_index/resource_index/rosidl_interfaces/zed_topic_benchmark_interfaces
+[1.105s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/benchmark_stats_stamped.h
+[1.105s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__functions.h
+[1.106s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__struct.h
+[1.106s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__type_support.h
+[1.106s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.106s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/environment/library_path.sh
+[1.106s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/environment/library_path.dsv
+[1.106s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__rosidl_typesupport_fastrtps_c.h
+[1.106s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.106s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/libzed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.106s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__rosidl_typesupport_fastrtps_cpp.hpp
+[1.107s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.107s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/libzed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.107s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__rosidl_typesupport_introspection_c.h
+[1.107s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.107s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/benchmark_stats_stamped.hpp
+[1.107s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__builder.hpp
+[1.108s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__struct.hpp
+[1.108s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__traits.hpp
+[1.108s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__type_support.hpp
+[1.109s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.109s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/include/zed_topic_benchmark_interfaces/msg/detail/benchmark_stats_stamped__rosidl_typesupport_introspection_cpp.hpp
+[1.112s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/environment/pythonpath.sh
+[1.112s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/environment/pythonpath.dsv
+[1.112s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages/zed_topic_benchmark_interfaces/__init__.py
+[1.113s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages/zed_topic_benchmark_interfaces/msg/__init__.py
+[1.113s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages/zed_topic_benchmark_interfaces/msg/_benchmark_stats_stamped.py
+[1.113s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages/zed_topic_benchmark_interfaces/zed_topic_benchmark_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-39-x86_64-linux-gnu.so
+[1.113s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages/zed_topic_benchmark_interfaces/zed_topic_benchmark_interfaces_s__rosidl_typesupport_introspection_c.cpython-39-x86_64-linux-gnu.so
+[1.113s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages/zed_topic_benchmark_interfaces/zed_topic_benchmark_interfaces_s__rosidl_typesupport_c.cpython-39-x86_64-linux-gnu.so
+[1.113s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/libzed_topic_benchmark_interfaces__python.so
+[1.114s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/msg/BenchmarkStatsStamped.idl
+[1.114s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/msg/BenchmarkStatsStamped.msg
+[1.114s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/ament_index/resource_index/package_run_dependencies/zed_topic_benchmark_interfaces
+[1.114s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/ament_index/resource_index/parent_prefix_path/zed_topic_benchmark_interfaces
+[1.115s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/environment/ament_prefix_path.sh
+[1.115s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/environment/ament_prefix_path.dsv
+[1.115s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/environment/path.sh
+[1.115s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/environment/path.dsv
+[1.115s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/local_setup.bash
+[1.117s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/local_setup.sh
+[1.117s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/local_setup.zsh
+[1.117s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/local_setup.dsv
+[1.117s] -- Symlinking: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/package.dsv
+[1.118s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/ament_index/resource_index/packages/zed_topic_benchmark_interfaces
+[1.118s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.118s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.118s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.118s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.118s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.118s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.119s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.119s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfacesConfig.cmake
+[1.119s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfacesConfig-version.cmake
+[1.119s] -- Up-to-date symlink: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/package.xml
+[1.119s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/libzed_topic_benchmark_interfaces__rosidl_generator_c.so
+[1.119s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/libzed_topic_benchmark_interfaces__rosidl_typesupport_introspection_c.so
+[1.119s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/libzed_topic_benchmark_interfaces__rosidl_typesupport_c.so
+[1.120s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/libzed_topic_benchmark_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.120s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/lib/libzed_topic_benchmark_interfaces__rosidl_typesupport_cpp.so
+[1.141s] Compiling '/home/song/zed/install/zed_topic_benchmark_interfaces/lib/python3.9/site-packages/zed_topic_benchmark_interfaces/__init__.py'...
+[1.144s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfaces__rosidl_generator_cExport.cmake
+[1.144s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfaces__rosidl_generator_cExport-release.cmake
+[1.144s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.144s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_cExport-release.cmake
+[1.144s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfaces__rosidl_typesupport_cExport.cmake
+[1.144s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfaces__rosidl_typesupport_cExport-release.cmake
+[1.145s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfaces__rosidl_generator_cppExport.cmake
+[1.145s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.145s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_cppExport-release.cmake
+[1.145s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfaces__rosidl_typesupport_cppExport.cmake
+[1.145s] -- Up-to-date: /home/song/zed/install/zed_topic_benchmark_interfaces/share/zed_topic_benchmark_interfaces/cmake/zed_topic_benchmark_interfaces__rosidl_typesupport_cppExport-release.cmake
+[1.152s] Invoked command in '/home/song/zed/build/zed_topic_benchmark_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --install /home/song/zed/build/zed_topic_benchmark_interfaces

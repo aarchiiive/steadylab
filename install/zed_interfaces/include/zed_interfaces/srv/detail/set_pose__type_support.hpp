@@ -1,0 +1,1 @@
+/home/song/steadylab/build/zed_interfaces/rosidl_generator_cpp/zed_interfaces/srv/detail/set_pose__type_support.hpp

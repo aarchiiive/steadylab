@@ -1,0 +1,3 @@
+[console_scripts]
+sub_zed_left_image = steadylab.zed_subscriber:main
+

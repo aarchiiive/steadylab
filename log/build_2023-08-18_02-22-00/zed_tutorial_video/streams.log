@@ -1,0 +1,61 @@
+[0.155s] Invoking command in '/home/song/steadylab/build/zed_tutorial_video': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake /home/song/steadylab/src/zed-ros2-examples/tutorials/zed_video_tutorial -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/song/steadylab/install/zed_tutorial_video
+[0.194s] -- The C compiler identification is GNU 9.4.0
+[0.247s] -- The CXX compiler identification is GNU 9.4.0
+[0.256s] -- Detecting C compiler ABI info
+[0.292s] -- Detecting C compiler ABI info - done
+[0.299s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.299s] -- Detecting C compile features
+[0.299s] -- Detecting C compile features - done
+[0.302s] -- Detecting CXX compiler ABI info
+[0.343s] -- Detecting CXX compiler ABI info - done
+[0.355s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.355s] -- Detecting CXX compile features
+[0.356s] -- Detecting CXX compile features - done
+[0.357s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[0.379s] -- Found PythonInterp: /home/song/anaconda3/bin/python3 (found suitable version "3.9.13", minimum required is "3") 
+[0.379s] -- Using PYTHON_EXECUTABLE: /home/song/anaconda3/bin/python3
+[0.556s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.670s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.677s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.734s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.758s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.810s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.844s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.845s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.846s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.882s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.882s] -- Looking for pthread_create in pthreads
+[0.914s] -- Looking for pthread_create in pthreads - not found
+[0.914s] -- Looking for pthread_create in pthread
+[0.952s] -- Looking for pthread_create in pthread - found
+[0.953s] -- Found Threads: TRUE  
+[1.130s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.134s] -- Configuring done (1.0s)
+[1.140s] -- Generating done (0.0s)
+[1.141s] -- Build files have been written to: /home/song/steadylab/build/zed_tutorial_video
+[1.151s] Invoked command in '/home/song/steadylab/build/zed_tutorial_video' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake /home/song/steadylab/src/zed-ros2-examples/tutorials/zed_video_tutorial -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/song/steadylab/install/zed_tutorial_video
+[1.152s] Invoking command in '/home/song/steadylab/build/zed_tutorial_video': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/steadylab/build/zed_tutorial_video -- -j20 -l20
+[1.179s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_tutorial_video.dir/src/zed_video_sub_tutorial.cpp.o[0m
+[7.528s] [100%] [32m[1mLinking CXX executable zed_tutorial_video[0m
+[7.602s] [100%] Built target zed_tutorial_video
+[7.612s] Invoked command in '/home/song/steadylab/build/zed_tutorial_video' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/steadylab/build/zed_tutorial_video -- -j20 -l20
+[7.722s] Invoking command in '/home/song/steadylab/build/zed_tutorial_video': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --install /home/song/steadylab/build/zed_tutorial_video
+[7.784s] -- Install configuration: "Release"
+[7.785s] -- Execute custom install script
+[7.785s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/lib/zed_tutorial_video/zed_tutorial_video
+[7.793s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/ament_index/resource_index/package_run_dependencies/zed_tutorial_video
+[7.796s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/ament_index/resource_index/parent_prefix_path/zed_tutorial_video
+[7.800s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/environment/ament_prefix_path.sh
+[7.804s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/environment/ament_prefix_path.dsv
+[7.808s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/environment/path.sh
+[7.812s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/environment/path.dsv
+[7.816s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/local_setup.bash
+[7.820s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/local_setup.sh
+[7.824s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/local_setup.zsh
+[7.827s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/local_setup.dsv
+[7.831s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/package.dsv
+[7.835s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/ament_index/resource_index/packages/zed_tutorial_video
+[7.839s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/cmake/zed_tutorial_videoConfig.cmake
+[7.842s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/cmake/zed_tutorial_videoConfig-version.cmake
+[7.846s] -- Symlinking: /home/song/steadylab/install/zed_tutorial_video/share/zed_tutorial_video/package.xml
+[7.868s] Invoked command in '/home/song/steadylab/build/zed_tutorial_video' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --install /home/song/steadylab/build/zed_tutorial_video

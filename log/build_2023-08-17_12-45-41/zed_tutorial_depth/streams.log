@@ -1,0 +1,71 @@
+[0.026s] Invoking command in '/home/song/zed/build/zed_tutorial_depth': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake /home/song/zed/src/zed-ros2-examples/tutorials/zed_depth_tutorial -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/song/zed/install/zed_tutorial_depth
+[0.073s] -- The C compiler identification is GNU 9.4.0
+[0.108s] -- The CXX compiler identification is GNU 9.4.0
+[0.115s] -- Detecting C compiler ABI info
+[0.151s] -- Detecting C compiler ABI info - done
+[0.162s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.163s] -- Detecting C compile features
+[0.163s] -- Detecting C compile features - done
+[0.166s] -- Detecting CXX compiler ABI info
+[0.208s] -- Detecting CXX compiler ABI info - done
+[0.217s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.217s] -- Detecting CXX compile features
+[0.218s] -- Detecting CXX compile features - done
+[0.218s] -- Found ament_cmake_auto: 0.9.12 (/opt/ros/foxy/share/ament_cmake_auto/cmake)
+[0.236s] -- Found PythonInterp: /home/song/anaconda3/bin/python3 (found suitable version "3.9.13", minimum required is "3") 
+[0.236s] -- Using PYTHON_EXECUTABLE: /home/song/anaconda3/bin/python3
+[0.370s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.470s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.475s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.519s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.541s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.595s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.628s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.629s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.629s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.667s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[0.667s] -- Looking for pthread_create in pthreads
+[0.696s] -- Looking for pthread_create in pthreads - not found
+[0.697s] -- Looking for pthread_create in pthread
+[0.732s] -- Looking for pthread_create in pthread - found
+[0.733s] -- Found Threads: TRUE  
+[0.896s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.914s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.914s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.914s] -- Configured cppcheck include dirs: 
+[0.915s] -- Configured cppcheck exclude dirs and/or files: 
+[0.915s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.915s] -- Configured cpplint exclude dirs and/or files: 
+[0.915s] -- Added test 'lint_cmake' to check CMake code style
+[0.916s] -- Added test 'uncrustify' to check C / C++ code style
+[0.916s] -- Configured uncrustify additional arguments: 
+[0.916s] -- Added test 'xmllint' to check XML markup files
+[0.917s] -- Configuring done (0.9s)
+[0.923s] -- Generating done (0.0s)
+[0.924s] -- Build files have been written to: /home/song/zed/build/zed_tutorial_depth
+[0.937s] Invoked command in '/home/song/zed/build/zed_tutorial_depth' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake /home/song/zed/src/zed-ros2-examples/tutorials/zed_depth_tutorial -DCMAKE_BUILD_TYPE=Release -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/song/zed/install/zed_tutorial_depth
+[0.939s] Invoking command in '/home/song/zed/build/zed_tutorial_depth': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/zed/build/zed_tutorial_depth -- -j20 -l20
+[0.967s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_tutorial_depth.dir/src/zed_depth_sub_tutorial.cpp.o[0m
+[4.685s] [100%] [32m[1mLinking CXX executable zed_tutorial_depth[0m
+[4.757s] [100%] Built target zed_tutorial_depth
+[4.765s] Invoked command in '/home/song/zed/build/zed_tutorial_depth' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/zed/build/zed_tutorial_depth -- -j20 -l20
+[4.795s] Invoking command in '/home/song/zed/build/zed_tutorial_depth': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --install /home/song/zed/build/zed_tutorial_depth
+[4.812s] -- Install configuration: "Release"
+[4.812s] -- Execute custom install script
+[4.813s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/lib/zed_tutorial_depth/zed_tutorial_depth
+[4.814s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/ament_index/resource_index/package_run_dependencies/zed_tutorial_depth
+[4.816s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/ament_index/resource_index/parent_prefix_path/zed_tutorial_depth
+[4.822s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/environment/ament_prefix_path.sh
+[4.822s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/environment/ament_prefix_path.dsv
+[4.822s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/environment/path.sh
+[4.822s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/environment/path.dsv
+[4.826s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/local_setup.bash
+[4.826s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/local_setup.sh
+[4.830s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/local_setup.zsh
+[4.830s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/local_setup.dsv
+[4.831s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/package.dsv
+[4.832s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/ament_index/resource_index/packages/zed_tutorial_depth
+[4.834s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/cmake/zed_tutorial_depthConfig.cmake
+[4.836s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/cmake/zed_tutorial_depthConfig-version.cmake
+[4.838s] -- Symlinking: /home/song/zed/install/zed_tutorial_depth/share/zed_tutorial_depth/package.xml
+[4.845s] Invoked command in '/home/song/zed/build/zed_tutorial_depth' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --install /home/song/zed/build/zed_tutorial_depth

@@ -1,0 +1,1 @@
+/home/song/steadylab/build/zed_interfaces/rosidl_generator_c/zed_interfaces/msg/detail/objects_stamped__struct.h
