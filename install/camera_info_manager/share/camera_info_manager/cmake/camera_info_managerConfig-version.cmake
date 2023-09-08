@@ -1,1 +1,0 @@
-/home/song/steadylab/build/camera_info_manager/ament_cmake_core/camera_info_managerConfig-version.cmake

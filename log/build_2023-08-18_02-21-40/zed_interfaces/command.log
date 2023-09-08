@@ -1,2 +1,0 @@
-Invoking command in '/home/song/steadylab/build/zed_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/steadylab/build/zed_interfaces -- -j20 -l20
-Invoked command in '/home/song/steadylab/build/zed_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/steadylab/build/zed_interfaces -- -j20 -l20

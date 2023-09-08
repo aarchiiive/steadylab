@@ -1,6 +1,0 @@
-[0.149s] Invoking command in '/home/song/steadylab/build/zed_tutorial_depth': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/steadylab/build/zed_tutorial_depth -- -j20 -l20
-[0.167s] [0mCMake Error: The current CMakeCache.txt directory /home/song/steadylab/build/zed_tutorial_depth/CMakeCache.txt is different than the directory /home/song/zed/build/zed_tutorial_depth where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
-[0.169s] [0mCMake Error: The source directory "/home/song/zed/src/zed-ros2-examples/tutorials/zed_depth_tutorial" does not exist.
-[0.170s] Specify --help for usage, or press the help button on the CMake GUI.[0m
-[0.170s] make: *** [Makefile:281: cmake_check_build_system] 오류 1
-[0.173s] Invoked command in '/home/song/steadylab/build/zed_tutorial_depth' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/zed/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /home/song/.local/bin/cmake --build /home/song/steadylab/build/zed_tutorial_depth -- -j20 -l20

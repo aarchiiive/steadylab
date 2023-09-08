@@ -1,1 +1,0 @@
-/home/song/steadylab/build/zed_interfaces/ament_cmake_core/zed_interfacesConfig.cmake

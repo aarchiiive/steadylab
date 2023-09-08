@@ -1,2 +1,15 @@
-*.png
-*.jpg
+# *.png
+# *.jpg
+*.mp4
+*.avi
+
+*.pt
+*.pth
+
+*.pyc
+*.yaml
+
+log/*
+build/*
+install/*
+bag/*

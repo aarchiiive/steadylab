@@ -1,1 +1,0 @@
-/home/song/steadylab/src/zed-ros2-examples/rviz-plugin-zed-od/src/plugin/include/zed_od_info.hpp

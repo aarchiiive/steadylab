@@ -1,1 +1,0 @@
-/home/song/steadylab/build/zed_interfaces/rosidl_cmake/srv/SetPose_Response.msg

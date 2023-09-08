@@ -1,1 +1,0 @@
-/home/song/steadylab/src/zed-ros2-wrapper/zed-ros2-interfaces/msg/Skeleton2D.msg

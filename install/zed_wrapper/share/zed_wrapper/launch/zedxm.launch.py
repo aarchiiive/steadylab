@@ -1,1 +1,0 @@
-/home/song/steadylab/src/zed-ros2-wrapper/zed_wrapper/launch/zedxm.launch.py

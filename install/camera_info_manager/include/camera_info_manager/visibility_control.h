@@ -1,1 +1,0 @@
-/home/song/steadylab/src/image_common/camera_info_manager/include/camera_info_manager/visibility_control.h
