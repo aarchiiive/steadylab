@@ -1,0 +1,10 @@
+[1.363s] Invoking command in '/home/song/steadylab/src/build/steadylab': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/song/steadylab/src/build/steadylab/prefix_override:/home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/song/steadylab/src/build/steadylab/build --no-deps install_data
+[1.769s] running develop
+[1.989s] running egg_info
+[1.990s] writing steadylab.egg-info/PKG-INFO
+[1.991s] writing dependency_links to steadylab.egg-info/dependency_links.txt
+[1.993s] writing entry points to steadylab.egg-info/entry_points.txt
+[1.995s] writing requirements to steadylab.egg-info/requires.txt
+[1.997s] writing top-level names to steadylab.egg-info/top_level.txt
+[2.047s] error: package directory 'steadylab' does not exist
+[2.103s] Invoked command in '/home/song/steadylab/src/build/steadylab' returned '1': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/song/steadylab/src/build/steadylab/prefix_override:/home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/song/steadylab/src/build/steadylab/build --no-deps install_data

@@ -1,0 +1,10 @@
+[  0%] Built target zed_interfaces__cpp
+[ 12%] Built target zed_interfaces__rosidl_generator_c
+[ 24%] Built target zed_interfaces__rosidl_typesupport_cpp
+[ 36%] Built target zed_interfaces__rosidl_typesupport_introspection_cpp
+[ 48%] Built target zed_interfaces__rosidl_typesupport_c
+[ 72%] Built target zed_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 72%] Built target zed_interfaces__rosidl_typesupport_introspection_c
+[ 84%] Built target zed_interfaces__rosidl_typesupport_fastrtps_c
+[ 84%] Built target zed_interfaces
+[ 85%] [34m[1mGenerating Python code for ROS interfaces[0m

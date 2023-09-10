@@ -1,0 +1,272 @@
+[0.000000] (-) TimerEvent: {}
+[0.000193] (-) JobUnselected: {'identifier': 'camera_calibration_parsers'}
+[0.000215] (-) JobUnselected: {'identifier': 'camera_info_manager'}
+[0.000226] (-) JobUnselected: {'identifier': 'image_common'}
+[0.000234] (-) JobUnselected: {'identifier': 'image_transport'}
+[0.000241] (-) JobUnselected: {'identifier': 'rviz_plugin_zed_od'}
+[0.000248] (-) JobUnselected: {'identifier': 'serial_communication'}
+[0.000255] (-) JobUnselected: {'identifier': 'steadylab'}
+[0.000262] (-) JobUnselected: {'identifier': 'yo'}
+[0.000269] (-) JobUnselected: {'identifier': 'zed_components'}
+[0.000276] (-) JobUnselected: {'identifier': 'zed_display_rviz2'}
+[0.000307] (-) JobUnselected: {'identifier': 'zed_interfaces'}
+[0.000316] (-) JobUnselected: {'identifier': 'zed_multi_camera'}
+[0.000323] (-) JobUnselected: {'identifier': 'zed_rgb_convert'}
+[0.000331] (-) JobUnselected: {'identifier': 'zed_ros2'}
+[0.000338] (-) JobUnselected: {'identifier': 'zed_topic_benchmark'}
+[0.000346] (-) JobUnselected: {'identifier': 'zed_topic_benchmark_component'}
+[0.000353] (-) JobUnselected: {'identifier': 'zed_topic_benchmark_interfaces'}
+[0.000361] (-) JobUnselected: {'identifier': 'zed_tutorial_depth'}
+[0.000368] (-) JobUnselected: {'identifier': 'zed_tutorial_pos_tracking'}
+[0.000376] (-) JobUnselected: {'identifier': 'zed_tutorial_video'}
+[0.000385] (-) JobUnselected: {'identifier': 'zed_wrapper'}
+[0.000394] (steady_msgs) JobQueued: {'identifier': 'steady_msgs', 'dependencies': OrderedDict()}
+[0.000405] (steady_msgs) JobStarted: {'identifier': 'steady_msgs'}
+[0.007656] (steady_msgs) JobProgress: {'identifier': 'steady_msgs', 'progress': 'cmake'}
+[0.007803] (steady_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/song/steadylab/src/steady_msgs', '-DCMAKE_INSTALL_PREFIX=/home/song/steadylab/src/install/steady_msgs'], 'cwd': '/home/song/steadylab/src/build/steady_msgs', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('LANGUAGE', 'ko:en'), ('USER', 'song'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '2489'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.8/lib64:/home/song/steadylab/install/zed_topic_benchmark_interfaces/lib:/home/song/steadylab/install/zed_rgb_convert/lib:/home/song/steadylab/install/zed_components/lib:/home/song/steadylab/install/rviz_plugin_zed_od/lib:/home/song/steadylab/install/zed_interfaces/lib:/home/song/steadylab/install/serial_communication/lib:/home/song/steadylab/install/image_transport/lib:/home/song/steadylab/install/camera_info_manager/lib:/home/song/steadylab/install/camera_calibration_parsers/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.8/lib64:'), ('HOME', '/home/song'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/song/steadylab'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '2028'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '7257'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/song/steadylab/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'song'), ('JOURNAL_STREAM', '8:68653'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'song'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda-11.8/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.8/bin:/home/song/anaconda3/bin:/home/song/anaconda3/condabin:/home/song/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/song:@/tmp/.ICE-unix/2527,unix/song:/tmp/.ICE-unix/2527'), ('INVOCATION_ID', '9ffa0491653a4c87bfa2379d30f09c11'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/song/steadylab/install/zed_ros2:/home/song/steadylab/install/zed_multi_camera:/home/song/steadylab/install/zed_display_rviz2:/home/song/steadylab/install/zed_wrapper:/home/song/steadylab/install/zed_tutorial_video:/home/song/steadylab/install/zed_tutorial_pos_tracking:/home/song/steadylab/install/zed_tutorial_depth:/home/song/steadylab/install/zed_topic_benchmark_interfaces:/home/song/steadylab/install/zed_rgb_convert:/home/song/steadylab/install/zed_components:/home/song/steadylab/install/rviz_plugin_zed_od:/home/song/steadylab/install/zed_interfaces:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/home/song/steadylab/install/serial_communication:/home/song/steadylab/install/image_common:/home/song/steadylab/install/image_transport:/home/song/steadylab/install/camera_info_manager:/home/song/steadylab/install/camera_calibration_parsers:/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/song/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:7dfcadd9-eb03-4168-b65c-eb867f8a48a2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/song/steadylab/src/build/steady_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/song/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/song/steadylab/install/zed_topic_benchmark_interfaces/lib/python3.8/site-packages:/home/song/steadylab/install/zed_interfaces/lib/python3.8/site-packages:/home/song/steadylab/build/yo:/home/song/steadylab/install/yo/lib/python3.8/site-packages:/home/song/steadylab/build/steadylab:/home/song/steadylab/install/steadylab/lib/python3.8/site-packages:/home/song/steadylab/install/serial_communication/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('CONDA_PREFIX', '/home/song/anaconda3'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/song/steadylab/install/zed_ros2:/home/song/steadylab/install/zed_multi_camera:/home/song/steadylab/install/zed_display_rviz2:/home/song/steadylab/install/zed_wrapper:/home/song/steadylab/install/zed_tutorial_video:/home/song/steadylab/install/zed_tutorial_pos_tracking:/home/song/steadylab/install/zed_tutorial_depth:/home/song/steadylab/install/zed_topic_benchmark_interfaces:/home/song/steadylab/install/zed_rgb_convert:/home/song/steadylab/install/zed_components:/home/song/steadylab/install/rviz_plugin_zed_od:/home/song/steadylab/install/zed_interfaces:/home/song/steadylab/install/serial_communication:/home/song/steadylab/install/image_common:/home/song/steadylab/install/image_transport:/home/song/steadylab/install/camera_info_manager:/home/song/steadylab/install/camera_calibration_parsers:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy')]), 'shell': False}
+[0.099227] (-) TimerEvent: {}
+[0.120250] (steady_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.154768] (steady_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.158477] (steady_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.199422] (-) TimerEvent: {}
+[0.199697] (steady_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.201061] (steady_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.243500] (steady_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.249959] (steady_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.250374] (steady_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.251987] (steady_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.298768] (steady_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.299347] (steady_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.299426] (-) TimerEvent: {}
+[0.348869] (steady_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.355165] (steady_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.355478] (steady_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.357725] (steady_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.359184] (steady_msgs) StdoutLine: {'line': b'-- Found ament_cmake_core: 0.9.12 (/opt/ros/foxy/share/ament_cmake_core/cmake)\n'}
+[0.376833] (steady_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /home/song/anaconda3/bin/python3 (found suitable version "3.9.13", minimum required is "3") \n'}
+[0.377009] (steady_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/song/anaconda3/bin/python3\n'}
+[0.399641] (-) TimerEvent: {}
+[0.499907] (-) TimerEvent: {}
+[0.553755] (steady_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.560641] (steady_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.600127] (-) TimerEvent: {}
+[0.646007] (steady_msgs) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[0.663311] (steady_msgs) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[0.700360] (-) TimerEvent: {}
+[0.711815] (steady_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.728284] (steady_msgs) StdoutLine: {'line': b'-- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)\n'}
+[0.729753] (steady_msgs) StdoutLine: {'line': b'-- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)\n'}
+[0.767394] (steady_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /home/song/anaconda3/bin/python3 (found version "3.9.13") \n'}
+[0.800593] (-) TimerEvent: {}
+[0.863316] (steady_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[0.900805] (-) TimerEvent: {}
+[0.923508] (steady_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.928300] (steady_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.947106] (steady_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /home/song/anaconda3/bin/python3 (found suitable version "3.9.13", minimum required is "3.5") \n'}
+[0.948654] (steady_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[0.970237] (steady_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /home/song/anaconda3/lib/libpython3.9.so (found suitable version "3.9.13", minimum required is "3.5") \n'}
+[0.970407] (steady_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/song/anaconda3/bin/python3\n'}
+[0.970479] (steady_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /home/song/anaconda3/include/python3.9\n'}
+[0.970558] (steady_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /home/song/anaconda3/lib/libpython3.9.so\n'}
+[0.988685] (steady_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.000952] (-) TimerEvent: {}
+[1.070133] (steady_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.085259] (steady_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.086215] (steady_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.086823] (steady_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.089714] (steady_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.101184] (-) TimerEvent: {}
+[1.102771] (steady_msgs) StderrLine: {'line': b'CMake Warning at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:235 (add_library):\n'}
+[1.102935] (steady_msgs) StderrLine: {'line': b'  Cannot generate a safe runtime search path for target\n'}
+[1.103008] (steady_msgs) StderrLine: {'line': b'  steady_msgs__rosidl_typesupport_fastrtps_c__pyext because files in some\n'}
+[1.103071] (steady_msgs) StderrLine: {'line': b'  directories may conflict with libraries in implicit directories:\n'}
+[1.103131] (steady_msgs) StderrLine: {'line': b'\n'}
+[1.103190] (steady_msgs) StderrLine: {'line': b'    runtime library [libssl.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:\n'}
+[1.103250] (steady_msgs) StderrLine: {'line': b'      /home/song/anaconda3/lib\n'}
+[1.103307] (steady_msgs) StderrLine: {'line': b'    runtime library [libcrypto.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:\n'}
+[1.103365] (steady_msgs) StderrLine: {'line': b'      /home/song/anaconda3/lib\n'}
+[1.103422] (steady_msgs) StderrLine: {'line': b'\n'}
+[1.103479] (steady_msgs) StderrLine: {'line': b'  Some of these libraries may not be found correctly.\n'}
+[1.103543] (steady_msgs) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.103603] (steady_msgs) StderrLine: {'line': b'  /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)\n'}
+[1.103666] (steady_msgs) StderrLine: {'line': b'  /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)\n'}
+[1.103729] (steady_msgs) StderrLine: {'line': b'  CMakeLists.txt:14 (rosidl_generate_interfaces)\n'}
+[1.103789] (steady_msgs) StderrLine: {'line': b'\n'}
+[1.103856] (steady_msgs) StderrLine: {'line': b'\n'}
+[1.107029] (steady_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.108403] (steady_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/song/steadylab/src/build/steady_msgs\n'}
+[1.115909] (steady_msgs) CommandEnded: {'returncode': 0}
+[1.116627] (steady_msgs) JobProgress: {'identifier': 'steady_msgs', 'progress': 'build'}
+[1.116659] (steady_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/song/steadylab/src/build/steady_msgs', '--', '-j20', '-l20'], 'cwd': '/home/song/steadylab/src/build/steady_msgs', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('LANGUAGE', 'ko:en'), ('USER', 'song'), ('LC_TIME', 'ko_KR.UTF-8'), ('SSH_AGENT_PID', '2489'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.8/lib64:/home/song/steadylab/install/zed_topic_benchmark_interfaces/lib:/home/song/steadylab/install/zed_rgb_convert/lib:/home/song/steadylab/install/zed_components/lib:/home/song/steadylab/install/rviz_plugin_zed_od/lib:/home/song/steadylab/install/zed_interfaces/lib:/home/song/steadylab/install/serial_communication/lib:/home/song/steadylab/install/image_transport/lib:/home/song/steadylab/install/camera_info_manager/lib:/home/song/steadylab/install/camera_calibration_parsers/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.8/lib64:'), ('HOME', '/home/song'), ('CONDA_SHLVL', '1'), ('OLDPWD', '/home/song/steadylab'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('MANAGERPID', '2028'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '7257'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/song/steadylab/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'song'), ('JOURNAL_STREAM', '8:68653'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'song'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/usr/local/cuda-11.8/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.8/bin:/home/song/anaconda3/bin:/home/song/anaconda3/condabin:/home/song/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/song:@/tmp/.ICE-unix/2527,unix/song:/tmp/.ICE-unix/2527'), ('INVOCATION_ID', '9ffa0491653a4c87bfa2379d30f09c11'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'ko_KR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/song/steadylab/install/zed_ros2:/home/song/steadylab/install/zed_multi_camera:/home/song/steadylab/install/zed_display_rviz2:/home/song/steadylab/install/zed_wrapper:/home/song/steadylab/install/zed_tutorial_video:/home/song/steadylab/install/zed_tutorial_pos_tracking:/home/song/steadylab/install/zed_tutorial_depth:/home/song/steadylab/install/zed_topic_benchmark_interfaces:/home/song/steadylab/install/zed_rgb_convert:/home/song/steadylab/install/zed_components:/home/song/steadylab/install/rviz_plugin_zed_od:/home/song/steadylab/install/zed_interfaces:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/home/song/steadylab/install/serial_communication:/home/song/steadylab/install/image_common:/home/song/steadylab/install/image_transport:/home/song/steadylab/install/camera_info_manager:/home/song/steadylab/install/camera_calibration_parsers:/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/song/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'ko_KR.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:7dfcadd9-eb03-4168-b65c-eb867f8a48a2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/song/steadylab/src/build/steady_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/song/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/song/steadylab/install/zed_topic_benchmark_interfaces/lib/python3.8/site-packages:/home/song/steadylab/install/zed_interfaces/lib/python3.8/site-packages:/home/song/steadylab/build/yo:/home/song/steadylab/install/yo/lib/python3.8/site-packages:/home/song/steadylab/build/steadylab:/home/song/steadylab/install/steadylab/lib/python3.8/site-packages:/home/song/steadylab/install/serial_communication/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('CONDA_PREFIX', '/home/song/anaconda3'), ('LC_PAPER', 'ko_KR.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/song/steadylab/install/zed_ros2:/home/song/steadylab/install/zed_multi_camera:/home/song/steadylab/install/zed_display_rviz2:/home/song/steadylab/install/zed_wrapper:/home/song/steadylab/install/zed_tutorial_video:/home/song/steadylab/install/zed_tutorial_pos_tracking:/home/song/steadylab/install/zed_tutorial_depth:/home/song/steadylab/install/zed_topic_benchmark_interfaces:/home/song/steadylab/install/zed_rgb_convert:/home/song/steadylab/install/zed_components:/home/song/steadylab/install/rviz_plugin_zed_od:/home/song/steadylab/install/zed_interfaces:/home/song/steadylab/install/serial_communication:/home/song/steadylab/install/image_common:/home/song/steadylab/install/image_transport:/home/song/steadylab/install/camera_info_manager:/home/song/steadylab/install/camera_calibration_parsers:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy')]), 'shell': False}
+[1.141145] (steady_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target steady_msgs__cpp\x1b[0m\n'}
+[1.141315] (steady_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.147331] (steady_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.201400] (-) TimerEvent: {}
+[1.301779] (-) TimerEvent: {}
+[1.343857] (steady_msgs) StdoutLine: {'line': b'[  4%] Built target steady_msgs__cpp\n'}
+[1.350732] (steady_msgs) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.351134] (steady_msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.351543] (steady_msgs) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.355780] (steady_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target steady_msgs__rosidl_generator_c\x1b[0m\n'}
+[1.365177] (steady_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/steady_msgs__rosidl_generator_c.dir/rosidl_generator_c/steady_msgs/msg/detail/write_car__functions.c.o\x1b[0m\n'}
+[1.365362] (steady_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/steady_msgs__rosidl_generator_c.dir/rosidl_generator_c/steady_msgs/msg/detail/boxes__functions.c.o\x1b[0m\n'}
+[1.365449] (steady_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/steady_msgs__rosidl_generator_c.dir/rosidl_generator_c/steady_msgs/msg/detail/read_car__functions.c.o\x1b[0m\n'}
+[1.396299] (steady_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libsteady_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[1.401990] (-) TimerEvent: {}
+[1.423361] (steady_msgs) StdoutLine: {'line': b'[ 19%] Built target steady_msgs__rosidl_generator_c\n'}
+[1.431028] (steady_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.431217] (steady_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.502208] (-) TimerEvent: {}
+[1.514777] (steady_msgs) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[1.515048] (steady_msgs) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[1.515439] (steady_msgs) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[1.515675] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/rosidl_typesupport_c/rosidl_typesupport_c", line 28, in <module>\n'}
+[1.515765] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp", line 23, in <module>\n'}
+[1.515882] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp", line 23, in <module>\n'}
+[1.515987] (steady_msgs) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[1.516060] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/visitors.py", line 115, in _call_userfunc\n'}
+[1.516140] (steady_msgs) StderrLine: {'line': b'    sys.exit(main())\n'}
+[1.516265] (steady_msgs) StderrLine: {'line': b'    sys.exit(main())\n'}
+[1.516318] (steady_msgs) StderrLine: {'line': b'    sys.exit(main())\n'}
+[1.516353] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp", line 19, in main\n'}
+[1.516388] (steady_msgs) StderrLine: {'line': b"make[2]: *** 'rosidl_typesupport_fastrtps_cpp/steady_msgs/msg/detail/dds_fastrtps/write_car__type_support.cpp' \xed\x8c\x8c\xec\x9d\xbc\xec\x9d\x84 \xec\x82\xad\xec\xa0\x9c\xed\x95\xa9\xeb\x8b\x88\xeb\x8b\xa4\n"}
+[1.516423] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/rosidl_typesupport_c/rosidl_typesupport_c", line 24, in main\n'}
+[1.516456] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp", line 19, in main\n'}
+[1.516494] (steady_msgs) StderrLine: {'line': b'    return generate_cpp(args.generator_arguments_file)\n'}
+[1.516524] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_fastrtps_cpp/__init__.py", line 24, in generate_cpp\n'}
+[1.516555] (steady_msgs) StderrLine: {'line': b'    return generate_c(args.generator_arguments_file, args.typesupports)\n'}
+[1.516604] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_c/__init__.py", line 28, in generate_c\n'}
+[1.516637] (steady_msgs) StderrLine: {'line': b'    return generate_cpp(args.generator_arguments_file)\n'}
+[1.516668] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_introspection_cpp/__init__.py", line 24, in generate_cpp\n'}
+[1.516699] (steady_msgs) StderrLine: {'line': b'    generate_files(generator_arguments_file, mapping)\n'}
+[1.516730] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files\n'}
+[1.516770] (steady_msgs) StderrLine: {'line': b'    generate_files(\n'}
+[1.516805] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files\n'}
+[1.516837] (steady_msgs) StderrLine: {'line': b'    generate_files(generator_arguments_file, mapping)\n'}
+[1.516868] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 87, in generate_files\n'}
+[1.516900] (steady_msgs) StderrLine: {'line': b'    idl_file = parse_idl_file(locator)\n'}
+[1.516935] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file\n'}
+[1.516969] (steady_msgs) StderrLine: {'line': b'    idl_file = parse_idl_file(locator)\n'}
+[1.517004] (steady_msgs) StderrLine: {'line': b"make[2]: *** 'rosidl_typesupport_introspection_cpp/steady_msgs/msg/detail/write_car__rosidl_typesupport_introspection_cpp.hpp' \xed\x8c\x8c\xec\x9d\xbc\xec\x9d\x84 \xec\x82\xad\xec\xa0\x9c\xed\x95\xa9\xeb\x8b\x88\xeb\x8b\xa4\n"}
+[1.517042] (steady_msgs) StderrLine: {'line': b"make[2]: *** 'rosidl_typesupport_cpp/steady_msgs/msg/read_car__type_support.cpp' \xed\x8c\x8c\xec\x9d\xbc\xec\x9d\x84 \xec\x82\xad\xec\xa0\x9c\xed\x95\xa9\xeb\x8b\x88\xeb\x8b\xa4\n"}
+[1.517077] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file\n'}
+[1.517112] (steady_msgs) StderrLine: {'line': b'    content = parse_idl_string(string, png_file=png_file)\n'}
+[1.517148] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string\n'}
+[1.517185] (steady_msgs) StderrLine: {'line': b'    expand_template(\n'}
+[1.517223] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 149, in expand_template\n'}
+[1.517263] (steady_msgs) StderrLine: {'line': b'    tree = get_ast_from_idl_string(idl_string)\n'}
+[1.517307] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 89, in get_ast_from_idl_string\n'}
+[1.517347] (steady_msgs) StderrLine: {'line': b'    content = parse_idl_string(string, png_file=png_file)\n'}
+[1.517386] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string\n'}
+[1.517429] (steady_msgs) StderrLine: {'line': b"make[2]: *** 'rosidl_typesupport_cpp/steady_msgs/msg/boxes__type_support.cpp' \xed\x8c\x8c\xec\x9d\xbc\xec\x9d\x84 \xec\x82\xad\xec\xa0\x9c\xed\x95\xa9\xeb\x8b\x88\xeb\x8b\xa4\n"}
+[1.517470] (steady_msgs) StderrLine: {'line': b'    interpreter.string(template_content, template_path, locals=data)\n'}
+[1.517507] (steady_msgs) StderrLine: {'line': b'    return _parser.parse(idl_string)\n'}
+[1.517543] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2391, in string\n'}
+[1.517579] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/lark.py", line 652, in parse\n'}
+[1.517633] (steady_msgs) StderrLine: {'line': b'    tree = get_ast_from_idl_string(idl_string)\n'}
+[1.517671] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string\n'}
+[1.517707] (steady_msgs) StderrLine: {'line': b"    _parser = Lark(grammar, start='specification')\n"}
+[1.517744] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/lark.py", line 406, in __init__\n'}
+[1.517782] (steady_msgs) StderrLine: {'line': b'make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_cpp.dir/build.make:76: rosidl_typesupport_cpp/steady_msgs/msg/boxes__type_support.cpp] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.517821] (steady_msgs) StderrLine: {'line': b'make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_cpp.dir/build.make:73: rosidl_typesupport_cpp/steady_msgs/msg/read_car__type_support.cpp] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.517860] (steady_msgs) StderrLine: {'line': b'    f = getattr(self, tree.data)\n'}
+[1.517900] (steady_msgs) StderrLine: {'line': b"AttributeError: 'Transformer_NonRecursive' object has no attribute 'literal'\n"}
+[1.517934] (steady_msgs) StderrLine: {'line': b'\n'}
+[1.517972] (steady_msgs) StderrLine: {'line': b'During handling of the above exception, another exception occurred:\n'}
+[1.518011] (steady_msgs) StderrLine: {'line': b'\n'}
+[1.518046] (steady_msgs) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[1.518080] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c", line 23, in <module>\n'}
+[1.518117] (steady_msgs) StderrLine: {'line': b'    sys.exit(main())\n'}
+[1.518153] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c", line 19, in main\n'}
+[1.518188] (steady_msgs) StderrLine: {'line': b'    return generate_c(args.generator_arguments_file)\n'}
+[1.518225] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_introspection_c/__init__.py", line 24, in generate_c\n'}
+[1.518259] (steady_msgs) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:498: CMakeFiles/steady_msgs__rosidl_typesupport_cpp.dir/all] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.518293] (steady_msgs) StderrLine: {'line': b'    self.terminals, self.rules, self.ignore_tokens = self.grammar.compile(self.options.start, terminals_to_keep)\n'}
+[1.518331] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/load_grammar.py", line 701, in compile\n'}
+[1.518365] (steady_msgs) StderrLine: {'line': b'    generate_files(generator_arguments_file, mapping)\n'}
+[1.518396] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files\n'}
+[1.518428] (steady_msgs) StderrLine: {'line': b'    return self.parser.parse(text, start=start, on_error=on_error)\n'}
+[1.518458] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parser_frontends.py", line 101, in parse\n'}
+[1.518488] (steady_msgs) StderrLine: {'line': b'    idl_file = parse_idl_file(locator)\n'}
+[1.518519] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file\n'}
+[1.518548] (steady_msgs) StderrLine: {'line': b'    content = parse_idl_string(string, png_file=png_file)\n'}
+[1.518578] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string\n'}
+[1.518628] (steady_msgs) StderrLine: {'line': b'    tree = get_ast_from_idl_string(idl_string)\n'}
+[1.518657] (steady_msgs) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string\n'}
+[1.518686] (steady_msgs) StderrLine: {'line': b"    _parser = Lark(grammar, start='specification')\n"}
+[1.518717] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/lark.py", line 406, in __init__\n'}
+[1.518746] (steady_msgs) StderrLine: {'line': b'    self.terminals, self.rules, self.ignore_tokens = self.grammar.compile(self.options.start, terminals_to_keep)\n'}
+[1.518776] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/load_grammar.py", line 690, in compile\n'}
+[1.518805] (steady_msgs) StderrLine: {'line': b'    return self.parser.parse(stream, chosen_start, **kw)\n'}
+[1.518834] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley.py", line 302, in parse\n'}
+[1.518864] (steady_msgs) StderrLine: {'line': b'    self.safe(scanner, True, locals)\n'}
+[1.518892] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2401, in safe\n'}
+[1.518921] (steady_msgs) StderrLine: {'line': b'    return transformer.transform(solutions[0])\n'}
+[1.518951] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 395, in transform\n'}
+[1.518979] (steady_msgs) StderrLine: {'line': b'    rule_defs = [(n, p, nr_deepcopy_tree(t), o) for n, p, t, o in self.rule_defs]\n'}
+[1.519008] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/load_grammar.py", line 690, in <listcomp>\n'}
+[1.519037] (steady_msgs) StderrLine: {'line': b"    expansions = list(term_tree.find_data('expansion'))\n"}
+[1.519067] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/tree.py", line 175, in find_data\n'}
+[1.519098] (steady_msgs) StderrLine: {'line': b'    rule_defs = [(n, p, nr_deepcopy_tree(t), o) for n, p, t, o in self.rule_defs]\n'}
+[1.519128] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/load_grammar.py", line 672, in nr_deepcopy_tree\n'}
+[1.519161] (steady_msgs) StderrLine: {'line': b'    self.parse(scanner, locals)\n'}
+[1.519193] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2417, in parse\n'}
+[1.519224] (steady_msgs) StderrLine: {'line': b'    return Transformer_NonRecursive(False).transform(t)\n'}
+[1.519253] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/visitors.py", line 314, in transform\n'}
+[1.519284] (steady_msgs) StderrLine: {'line': b'    res = self._call_userfunc(x, args)\n'}
+[1.519314] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/visitors.py", line 117, in _call_userfunc\n'}
+[1.519344] (steady_msgs) StderrLine: {'line': b'    return self.__default__(tree.data, children, tree.meta)\n'}
+[1.519374] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/tree.py", line 66, in meta\n'}
+[1.519402] (steady_msgs) StderrLine: {'line': b'    return self.find_pred(lambda t: t.data == data)\n'}
+[1.519431] (steady_msgs) StderrLine: {'line': b'    self.visit(root)\n'}
+[1.519459] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/tree.py", line 171, in find_pred\n'}
+[1.519488] (steady_msgs) StderrLine: {'line': b'    @property\n'}
+[1.519517] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 531, in visit\n'}
+[1.519546] (steady_msgs) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[1.519576] (steady_msgs) StderrLine: {'line': b'    return filter(pred, self.iter_subtrees())\n'}
+[1.519623] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/tree.py", line 147, in iter_subtrees\n'}
+[1.519653] (steady_msgs) StderrLine: {'line': b'    queue += [c for c in reversed(subtree.children)  # type: ignore[misc]\n'}
+[1.519682] (steady_msgs) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[1.519710] (steady_msgs) StderrLine: {'line': b'    token = scanner.one()\n'}
+[1.519738] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1984, in one\n'}
+[1.519765] (steady_msgs) StderrLine: {'line': b'    self.prioritizer.visit(root)\n'}
+[1.519793] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 355, in visit\n'}
+[1.519821] (steady_msgs) StderrLine: {'line': b'    next_node = vsni(current)\n'}
+[1.519848] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 472, in visit_symbol_node_in\n'}
+[1.519878] (steady_msgs) StderrLine: {'line': b'    token.scan(self)\n'}
+[1.519907] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1468, in scan\n'}
+[1.519938] (steady_msgs) StderrLine: {'line': b'    return iter(node.children)\n'}
+[1.519968] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 88, in children\n'}
+[1.519998] (steady_msgs) StderrLine: {'line': b'    self.load_paths()\n'}
+[1.520028] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 69, in load_paths\n'}
+[1.520057] (steady_msgs) StderrLine: {'line': b'    for transitive, node in self.paths:\n'}
+[1.520086] (steady_msgs) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[1.520125] (steady_msgs) StderrLine: {'line': b'    self.subscan(scanner, self.type)\n'}
+[1.520155] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1483, in subscan\n'}
+[1.520185] (steady_msgs) StderrLine: {'line': b'    token = scanner.one()\n'}
+[1.520213] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1984, in one\n'}
+[1.520240] (steady_msgs) StderrLine: {'line': b'    token.scan(self)\n'}
+[1.520268] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1421, in scan\n'}
+[1.520296] (steady_msgs) StderrLine: {'line': b"    i = scanner.complex('{', '}', 0)\n"}
+[1.520324] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1907, in complex\n'}
+[1.520353] (steady_msgs) StderrLine: {'line': b'    if c == enter:\n'}
+[1.520381] (steady_msgs) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[1.522278] (steady_msgs) StderrLine: {'line': b'Exception ignored in: <function Interpreter.__del__ at 0x7f77bf65fca0>\n'}
+[1.522432] (steady_msgs) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[1.522474] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2094, in __del__\n'}
+[1.522507] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2157, in shutdown\n'}
+[1.522538] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2647, in finalize\n'}
+[1.522568] (steady_msgs) StderrLine: {'line': b'  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2200, in push\n'}
+[1.522619] (steady_msgs) StderrLine: {'line': b"AttributeError: '_io.TextIOWrapper' object has no attribute 'push'\n"}
+[1.524756] (steady_msgs) StderrLine: {'line': b'make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_introspection_c.dir/build.make:72: rosidl_typesupport_introspection_c/steady_msgs/msg/detail/write_car__rosidl_typesupport_introspection_c.h] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.524979] (steady_msgs) StderrLine: {'line': b'make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_c.dir/build.make:70: rosidl_typesupport_c/steady_msgs/msg/write_car__type_support.cpp] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.525034] (steady_msgs) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:327: CMakeFiles/steady_msgs__rosidl_typesupport_introspection_c.dir/all] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.525162] (steady_msgs) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:411: CMakeFiles/steady_msgs__rosidl_typesupport_c.dir/all] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.526891] (steady_msgs) StderrLine: {'line': b'make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make:72: rosidl_typesupport_fastrtps_cpp/steady_msgs/msg/detail/dds_fastrtps/write_car__type_support.cpp] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.527061] (steady_msgs) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:384: CMakeFiles/steady_msgs__rosidl_typesupport_fastrtps_cpp.dir/all] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.527098] (steady_msgs) StderrLine: {'line': b'make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_introspection_cpp.dir/build.make:72: rosidl_typesupport_introspection_cpp/steady_msgs/msg/detail/write_car__rosidl_typesupport_introspection_cpp.hpp] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.527137] (steady_msgs) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:525: CMakeFiles/steady_msgs__rosidl_typesupport_introspection_cpp.dir/all] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.527271] (steady_msgs) StderrLine: {'line': b'make: *** [Makefile:141: all] \xec\x9d\xb8\xed\x84\xb0\xeb\x9f\xbd\xed\x8a\xb8\n'}
+[1.529523] (steady_msgs) CommandEnded: {'returncode': -2}
+[1.582739] (steady_msgs) JobEnded: {'identifier': 'steady_msgs', 'rc': 'SIGINT'}
+[1.593088] (-) EventReactorShutdown: {}

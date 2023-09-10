@@ -1,0 +1,27 @@
+[0.043s] Invoking command in '/home/song/steadylab/src/build/camera_calibration_parsers': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/song/steadylab/src/build/camera_calibration_parsers -- -j20 -l20
+[0.670s] [35m[1mScanning dependencies of target gtest[0m
+[0.670s] [35m[1mScanning dependencies of target gtest_main[0m
+[0.670s] [35m[1mScanning dependencies of target camera_calibration_parsers[0m
+[0.670s] [  7%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[0.670s] [ 14%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[0.670s] [ 28%] [32mBuilding CXX object CMakeFiles/camera_calibration_parsers.dir/src/parse.cpp.o[0m
+[0.670s] [ 28%] [32mBuilding CXX object CMakeFiles/camera_calibration_parsers.dir/src/parse_ini.cpp.o[0m
+[0.670s] [ 35%] [32mBuilding CXX object CMakeFiles/camera_calibration_parsers.dir/src/parse_yml.cpp.o[0m
+[1.228s] [ 42%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[1.346s] [ 42%] Built target gtest_main
+[3.586s] [ 50%] [32m[1mLinking CXX shared library libcamera_calibration_parsers.so[0m
+[3.731s] [ 50%] Built target camera_calibration_parsers
+[3.751s] [35m[1mScanning dependencies of target convert[0m
+[3.774s] [ 57%] [32mBuilding CXX object CMakeFiles/convert.dir/src/convert.cpp.o[0m
+[4.642s] [ 64%] [32m[1mLinking CXX executable convert[0m
+[5.055s] [ 64%] Built target convert
+[9.299s] [ 71%] [32m[1mLinking CXX static library libgtest.a[0m
+[9.325s] [ 71%] Built target gtest
+[9.333s] [35m[1mScanning dependencies of target camera_calibration_parsers-parse_yml[0m
+[9.333s] [35m[1mScanning dependencies of target camera_calibration_parsers-parse_ini[0m
+[9.346s] [ 78%] [32mBuilding CXX object CMakeFiles/camera_calibration_parsers-parse_ini.dir/test/test_parse_ini.cpp.o[0m
+[9.347s] [ 85%] [32mBuilding CXX object CMakeFiles/camera_calibration_parsers-parse_yml.dir/test/test_parse_yml.cpp.o[0m
+[10.465s] [ 92%] [32m[1mLinking CXX executable camera_calibration_parsers-parse_ini[0m
+[10.487s] [100%] [32m[1mLinking CXX executable camera_calibration_parsers-parse_yml[0m
+[10.538s] [100%] Built target camera_calibration_parsers-parse_ini
+[10.560s] [100%] Built target camera_calibration_parsers-parse_yml

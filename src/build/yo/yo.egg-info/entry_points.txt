@@ -1,0 +1,3 @@
+[console_scripts]
+realtime_bev_ros2 = yo.realtime_bev_ros2:main
+

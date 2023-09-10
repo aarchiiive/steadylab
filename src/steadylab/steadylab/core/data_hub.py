@@ -17,22 +17,20 @@ class DataHub(Node):
         self.callbacks = {}
         self.processors = {}
         self.data = {}
-        self.test = self.create_publisher(Int16, "/test", 10)
-        self.timer = self.create_timer(0.5, self.test_callback)
 
         for name, message in messages.items():
             self.callbacks[name] = self.make_callback(name)
             self.processors[name] = message.processor
             self.data[name] = None
 
-            setattr(self, f"{name}_sub", self.create_subscription(
+            setattr(self, f"sub_{name}", self.create_subscription(
                 message.msg_type,
                 message.topic,
                 self.callbacks[name],
                 self.qos_profile,
             ))
             
-            setattr(self, f"{name}_pub", self.create_publisher(
+            setattr(self, f"pub_{name}", self.create_publisher(
                 message.msg_type,
                 f"/{name}",
                 self.qos_profile,
@@ -43,11 +41,5 @@ class DataHub(Node):
     def make_callback(self, name):
         def callback(msg):
             self.data[name] = msg
-            getattr(self, f"{name}_pub").publish(msg)
+            getattr(self, f"pub_{name}").publish(msg)
         return callback
-    
-    def test_callback(self):
-        msg = Int16()
-        msg.data = 1
-        self.test.publish(msg)
-        print(f"publish : {msg.data}")

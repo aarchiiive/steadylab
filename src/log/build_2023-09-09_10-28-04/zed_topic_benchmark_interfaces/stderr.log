@@ -1,0 +1,133 @@
+ImportError in template '/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_msg.py.em': 
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.9 from "/home/song/anaconda3/bin/python3"
+  * The NumPy version is: "1.23.1"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: No module named 'numpy.core._multiarray_umath'
+
+ImportError when expanding '_idl.py.em' into '/home/song/steadylab/src/build/zed_topic_benchmark_interfaces/rosidl_generator_py/zed_topic_benchmark_interfaces/msg/_benchmark_stats_stamped.py': 
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.9 from "/home/song/anaconda3/bin/python3"
+  * The NumPy version is: "1.23.1"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: No module named 'numpy.core._multiarray_umath'
+
+Error processing idl file: /home/song/steadylab/src/build/zed_topic_benchmark_interfaces/rosidl_adapter/zed_topic_benchmark_interfaces/msg/BenchmarkStatsStamped.idl
+Traceback (most recent call last):
+  File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/__init__.py", line 23, in <module>
+    from . import multiarray
+  File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/multiarray.py", line 10, in <module>
+    from . import overrides
+  File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/overrides.py", line 6, in <module>
+    from numpy.core._multiarray_umath import (
+ModuleNotFoundError: No module named 'numpy.core._multiarray_umath'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py", line 40, in <module>
+    sys.exit(main())
+  File "/opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py", line 36, in main
+    return generate_py(args.generator_arguments_file, args.typesupport_impls.split(';'))
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_py/generate_py_impl.py", line 61, in generate_py
+    generate_files(generator_arguments_file, mapping)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 96, in generate_files
+    raise(e)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 87, in generate_files
+    expand_template(
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 149, in expand_template
+    interpreter.string(template_content, template_path, locals=data)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2391, in string
+    self.safe(scanner, True, locals)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2401, in safe
+    self.parse(scanner, locals)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2421, in parse
+    token.run(self, locals)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1547, in run
+    self.subrun(info[0][1], interpreter, locals)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1631, in subrun
+    token.run(interpreter, locals)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1425, in run
+    interpreter.execute(self.code, locals)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2596, in execute
+    _exec(statements, self.globals, locals)
+  File "<string>", line 2, in <module>
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 198, in _expand_template
+    interpreter.string(content, str(template_path), kwargs)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2391, in string
+    self.safe(scanner, True, locals)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2401, in safe
+    self.parse(scanner, locals)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2421, in parse
+    token.run(self, locals)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1425, in run
+    interpreter.execute(self.code, locals)
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2596, in execute
+    _exec(statements, self.globals, locals)
+  File "<string>", line 3, in <module>
+  File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/__init__.py", line 140, in <module>
+    from . import core
+  File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/__init__.py", line 49, in <module>
+    raise ImportError(msg)
+ImportError: 
+
+IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+
+Importing the numpy C-extensions failed. This error can happen for
+many reasons, often due to issues with your setup or how NumPy was
+installed.
+
+We have compiled some common reasons and troubleshooting tips at:
+
+    https://numpy.org/devdocs/user/troubleshooting-importerror.html
+
+Please note and check the following:
+
+  * The Python version is: Python3.9 from "/home/song/anaconda3/bin/python3"
+  * The NumPy version is: "1.23.1"
+
+and make sure that they are the versions you expect.
+Please carefully study the documentation linked above for further help.
+
+Original error was: No module named 'numpy.core._multiarray_umath'
+
+Exception ignored in: <function Interpreter.__del__ at 0x7f86d8e9c3a0>
+Traceback (most recent call last):
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2094, in __del__
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2157, in shutdown
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2647, in finalize
+  File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2200, in push
+AttributeError: '_io.TextIOWrapper' object has no attribute 'push'
+make[2]: *** [zed_topic_benchmark_interfaces__py/CMakeFiles/zed_topic_benchmark_interfaces__py.dir/build.make:111: rosidl_generator_py/zed_topic_benchmark_interfaces/_zed_topic_benchmark_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c] 오류 1
+make[1]: *** [CMakeFiles/Makefile2:581: zed_topic_benchmark_interfaces__py/CMakeFiles/zed_topic_benchmark_interfaces__py.dir/all] 오류 2
+make: *** [Makefile:141: all] 오류 2

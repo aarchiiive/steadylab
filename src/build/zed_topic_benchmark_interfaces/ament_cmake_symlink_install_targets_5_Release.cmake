@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/song/steadylab/src/build/zed_topic_benchmark_interfaces/rosidl_generator_py/zed_topic_benchmark_interfaces/libzed_topic_benchmark_interfaces__python.so" "TARGETS" "zed_topic_benchmark_interfaces__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

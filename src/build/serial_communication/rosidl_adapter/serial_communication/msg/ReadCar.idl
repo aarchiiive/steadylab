@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from serial_communication/msg/ReadCar.msg
+// generated code does not contain a copyright notice
+
+
+module serial_communication {
+  module msg {
+    struct ReadCar {
+      boolean read_aorm;
+
+      boolean read_e_stop;
+
+      int8 read_gear;
+
+      int16 read_speed;
+
+      int16 read_brake;
+
+      int64 read_enc;
+
+      int32 read_steer;
+
+      double read_s;
+
+      double read_l;
+
+      double read_yaw;
+
+      double read_velocity;
+
+      double read_accel;
+    };
+  };
+};

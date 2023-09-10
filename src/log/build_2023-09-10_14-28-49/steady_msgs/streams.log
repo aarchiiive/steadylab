@@ -1,0 +1,229 @@
+[0.009s] Invoking command in '/home/song/steadylab/src/build/steady_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/song/steadylab/src/steady_msgs -DCMAKE_INSTALL_PREFIX=/home/song/steadylab/src/install/steady_msgs
+[0.120s] -- The C compiler identification is GNU 9.4.0
+[0.154s] -- The CXX compiler identification is GNU 9.4.0
+[0.158s] -- Check for working C compiler: /usr/bin/cc
+[0.199s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.201s] -- Detecting C compiler ABI info
+[0.243s] -- Detecting C compiler ABI info - done
+[0.250s] -- Detecting C compile features
+[0.250s] -- Detecting C compile features - done
+[0.252s] -- Check for working CXX compiler: /usr/bin/c++
+[0.298s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.299s] -- Detecting CXX compiler ABI info
+[0.349s] -- Detecting CXX compiler ABI info - done
+[0.355s] -- Detecting CXX compile features
+[0.355s] -- Detecting CXX compile features - done
+[0.357s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.359s] -- Found ament_cmake_core: 0.9.12 (/opt/ros/foxy/share/ament_cmake_core/cmake)
+[0.377s] -- Found PythonInterp: /home/song/anaconda3/bin/python3 (found suitable version "3.9.13", minimum required is "3") 
+[0.377s] -- Using PYTHON_EXECUTABLE: /home/song/anaconda3/bin/python3
+[0.553s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.560s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.646s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.663s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.712s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.728s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[0.729s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[0.767s] -- Found PythonInterp: /home/song/anaconda3/bin/python3 (found version "3.9.13") 
+[0.863s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[0.923s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.928s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.947s] -- Found PythonInterp: /home/song/anaconda3/bin/python3 (found suitable version "3.9.13", minimum required is "3.5") 
+[0.948s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[0.970s] -- Found PythonLibs: /home/song/anaconda3/lib/libpython3.9.so (found suitable version "3.9.13", minimum required is "3.5") 
+[0.970s] -- Using PYTHON_EXECUTABLE: /home/song/anaconda3/bin/python3
+[0.970s] -- Using PYTHON_INCLUDE_DIRS: /home/song/anaconda3/include/python3.9
+[0.970s] -- Using PYTHON_LIBRARIES: /home/song/anaconda3/lib/libpython3.9.so
+[0.988s] -- Found PythonExtra: .so  
+[1.070s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.085s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.086s] -- Added test 'lint_cmake' to check CMake code style
+[1.087s] -- Added test 'xmllint' to check XML markup files
+[1.089s] -- Configuring done
+[1.102s] CMake Warning at /opt/ros/foxy/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:235 (add_library):
+[1.103s]   Cannot generate a safe runtime search path for target
+[1.103s]   steady_msgs__rosidl_typesupport_fastrtps_c__pyext because files in some
+[1.103s]   directories may conflict with libraries in implicit directories:
+[1.103s] 
+[1.103s]     runtime library [libssl.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+[1.103s]       /home/song/anaconda3/lib
+[1.103s]     runtime library [libcrypto.so.1.1] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+[1.103s]       /home/song/anaconda3/lib
+[1.103s] 
+[1.103s]   Some of these libraries may not be found correctly.
+[1.103s] Call Stack (most recent call first):
+[1.103s]   /opt/ros/foxy/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[1.103s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[1.103s]   CMakeLists.txt:14 (rosidl_generate_interfaces)
+[1.103s] 
+[1.103s] 
+[1.107s] -- Generating done
+[1.108s] -- Build files have been written to: /home/song/steadylab/src/build/steady_msgs
+[1.116s] Invoked command in '/home/song/steadylab/src/build/steady_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/song/steadylab/src/steady_msgs -DCMAKE_INSTALL_PREFIX=/home/song/steadylab/src/install/steady_msgs
+[1.116s] Invoking command in '/home/song/steadylab/src/build/steady_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/song/steadylab/src/build/steady_msgs -- -j20 -l20
+[1.141s] [35m[1mScanning dependencies of target steady_msgs__cpp[0m
+[1.141s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.147s] [  4%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.344s] [  4%] Built target steady_msgs__cpp
+[1.350s] [  6%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.351s] [  8%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.351s] [ 10%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.355s] [35m[1mScanning dependencies of target steady_msgs__rosidl_generator_c[0m
+[1.365s] [ 17%] [32mBuilding C object CMakeFiles/steady_msgs__rosidl_generator_c.dir/rosidl_generator_c/steady_msgs/msg/detail/write_car__functions.c.o[0m
+[1.365s] [ 17%] [32mBuilding C object CMakeFiles/steady_msgs__rosidl_generator_c.dir/rosidl_generator_c/steady_msgs/msg/detail/boxes__functions.c.o[0m
+[1.365s] [ 17%] [32mBuilding C object CMakeFiles/steady_msgs__rosidl_generator_c.dir/rosidl_generator_c/steady_msgs/msg/detail/read_car__functions.c.o[0m
+[1.396s] [ 19%] [32m[1mLinking C shared library libsteady_msgs__rosidl_generator_c.so[0m
+[1.423s] [ 19%] Built target steady_msgs__rosidl_generator_c
+[1.431s] [ 23%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.431s] [ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.514s] Traceback (most recent call last):
+[1.515s] Traceback (most recent call last):
+[1.515s] Traceback (most recent call last):
+[1.515s]   File "/opt/ros/foxy/lib/rosidl_typesupport_c/rosidl_typesupport_c", line 28, in <module>
+[1.515s]   File "/opt/ros/foxy/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp", line 23, in <module>
+[1.516s]   File "/opt/ros/foxy/lib/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp", line 23, in <module>
+[1.516s] Traceback (most recent call last):
+[1.516s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/visitors.py", line 115, in _call_userfunc
+[1.516s]     sys.exit(main())
+[1.516s]     sys.exit(main())
+[1.516s]     sys.exit(main())
+[1.516s]   File "/opt/ros/foxy/lib/rosidl_typesupport_fastrtps_cpp/rosidl_typesupport_fastrtps_cpp", line 19, in main
+[1.516s] make[2]: *** 'rosidl_typesupport_fastrtps_cpp/steady_msgs/msg/detail/dds_fastrtps/write_car__type_support.cpp' 파일을 삭제합니다
+[1.516s]   File "/opt/ros/foxy/lib/rosidl_typesupport_c/rosidl_typesupport_c", line 24, in main
+[1.516s]   File "/opt/ros/foxy/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp", line 19, in main
+[1.516s]     return generate_cpp(args.generator_arguments_file)
+[1.516s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_fastrtps_cpp/__init__.py", line 24, in generate_cpp
+[1.516s]     return generate_c(args.generator_arguments_file, args.typesupports)
+[1.516s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_c/__init__.py", line 28, in generate_c
+[1.516s]     return generate_cpp(args.generator_arguments_file)
+[1.516s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_introspection_cpp/__init__.py", line 24, in generate_cpp
+[1.516s]     generate_files(generator_arguments_file, mapping)
+[1.516s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files
+[1.516s]     generate_files(
+[1.516s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files
+[1.516s]     generate_files(generator_arguments_file, mapping)
+[1.516s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 87, in generate_files
+[1.517s]     idl_file = parse_idl_file(locator)
+[1.517s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file
+[1.517s]     idl_file = parse_idl_file(locator)
+[1.517s] make[2]: *** 'rosidl_typesupport_introspection_cpp/steady_msgs/msg/detail/write_car__rosidl_typesupport_introspection_cpp.hpp' 파일을 삭제합니다
+[1.517s] make[2]: *** 'rosidl_typesupport_cpp/steady_msgs/msg/read_car__type_support.cpp' 파일을 삭제합니다
+[1.517s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file
+[1.517s]     content = parse_idl_string(string, png_file=png_file)
+[1.517s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string
+[1.517s]     expand_template(
+[1.517s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 149, in expand_template
+[1.517s]     tree = get_ast_from_idl_string(idl_string)
+[1.517s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 89, in get_ast_from_idl_string
+[1.517s]     content = parse_idl_string(string, png_file=png_file)
+[1.517s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string
+[1.517s] make[2]: *** 'rosidl_typesupport_cpp/steady_msgs/msg/boxes__type_support.cpp' 파일을 삭제합니다
+[1.517s]     interpreter.string(template_content, template_path, locals=data)
+[1.517s]     return _parser.parse(idl_string)
+[1.517s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2391, in string
+[1.517s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/lark.py", line 652, in parse
+[1.517s]     tree = get_ast_from_idl_string(idl_string)
+[1.517s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string
+[1.517s]     _parser = Lark(grammar, start='specification')
+[1.517s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/lark.py", line 406, in __init__
+[1.517s] make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_cpp.dir/build.make:76: rosidl_typesupport_cpp/steady_msgs/msg/boxes__type_support.cpp] 인터럽트
+[1.517s] make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_cpp.dir/build.make:73: rosidl_typesupport_cpp/steady_msgs/msg/read_car__type_support.cpp] 인터럽트
+[1.517s]     f = getattr(self, tree.data)
+[1.518s] AttributeError: 'Transformer_NonRecursive' object has no attribute 'literal'
+[1.518s] 
+[1.518s] During handling of the above exception, another exception occurred:
+[1.518s] 
+[1.518s] Traceback (most recent call last):
+[1.518s]   File "/opt/ros/foxy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c", line 23, in <module>
+[1.518s]     sys.exit(main())
+[1.518s]   File "/opt/ros/foxy/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c", line 19, in main
+[1.518s]     return generate_c(args.generator_arguments_file)
+[1.518s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_introspection_c/__init__.py", line 24, in generate_c
+[1.518s] make[1]: *** [CMakeFiles/Makefile2:498: CMakeFiles/steady_msgs__rosidl_typesupport_cpp.dir/all] 인터럽트
+[1.518s]     self.terminals, self.rules, self.ignore_tokens = self.grammar.compile(self.options.start, terminals_to_keep)
+[1.518s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/load_grammar.py", line 701, in compile
+[1.518s]     generate_files(generator_arguments_file, mapping)
+[1.518s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files
+[1.518s]     return self.parser.parse(text, start=start, on_error=on_error)
+[1.518s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parser_frontends.py", line 101, in parse
+[1.518s]     idl_file = parse_idl_file(locator)
+[1.518s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file
+[1.518s]     content = parse_idl_string(string, png_file=png_file)
+[1.518s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string
+[1.518s]     tree = get_ast_from_idl_string(idl_string)
+[1.518s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string
+[1.518s]     _parser = Lark(grammar, start='specification')
+[1.518s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/lark.py", line 406, in __init__
+[1.518s]     self.terminals, self.rules, self.ignore_tokens = self.grammar.compile(self.options.start, terminals_to_keep)
+[1.518s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/load_grammar.py", line 690, in compile
+[1.518s]     return self.parser.parse(stream, chosen_start, **kw)
+[1.518s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley.py", line 302, in parse
+[1.518s]     self.safe(scanner, True, locals)
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2401, in safe
+[1.519s]     return transformer.transform(solutions[0])
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 395, in transform
+[1.519s]     rule_defs = [(n, p, nr_deepcopy_tree(t), o) for n, p, t, o in self.rule_defs]
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/load_grammar.py", line 690, in <listcomp>
+[1.519s]     expansions = list(term_tree.find_data('expansion'))
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/tree.py", line 175, in find_data
+[1.519s]     rule_defs = [(n, p, nr_deepcopy_tree(t), o) for n, p, t, o in self.rule_defs]
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/load_grammar.py", line 672, in nr_deepcopy_tree
+[1.519s]     self.parse(scanner, locals)
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2417, in parse
+[1.519s]     return Transformer_NonRecursive(False).transform(t)
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/visitors.py", line 314, in transform
+[1.519s]     res = self._call_userfunc(x, args)
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/visitors.py", line 117, in _call_userfunc
+[1.519s]     return self.__default__(tree.data, children, tree.meta)
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/tree.py", line 66, in meta
+[1.519s]     return self.find_pred(lambda t: t.data == data)
+[1.519s]     self.visit(root)
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/tree.py", line 171, in find_pred
+[1.519s]     @property
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 531, in visit
+[1.519s] KeyboardInterrupt
+[1.519s]     return filter(pred, self.iter_subtrees())
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/tree.py", line 147, in iter_subtrees
+[1.519s]     queue += [c for c in reversed(subtree.children)  # type: ignore[misc]
+[1.519s] KeyboardInterrupt
+[1.519s]     token = scanner.one()
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1984, in one
+[1.519s]     self.prioritizer.visit(root)
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 355, in visit
+[1.519s]     next_node = vsni(current)
+[1.519s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 472, in visit_symbol_node_in
+[1.519s]     token.scan(self)
+[1.520s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1468, in scan
+[1.520s]     return iter(node.children)
+[1.520s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 88, in children
+[1.520s]     self.load_paths()
+[1.520s]   File "/home/song/anaconda3/lib/python3.9/site-packages/lark/parsers/earley_forest.py", line 69, in load_paths
+[1.520s]     for transitive, node in self.paths:
+[1.520s] KeyboardInterrupt
+[1.520s]     self.subscan(scanner, self.type)
+[1.520s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1483, in subscan
+[1.520s]     token = scanner.one()
+[1.520s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1984, in one
+[1.520s]     token.scan(self)
+[1.520s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1421, in scan
+[1.520s]     i = scanner.complex('{', '}', 0)
+[1.520s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1907, in complex
+[1.520s]     if c == enter:
+[1.520s] KeyboardInterrupt
+[1.522s] Exception ignored in: <function Interpreter.__del__ at 0x7f77bf65fca0>
+[1.522s] Traceback (most recent call last):
+[1.522s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2094, in __del__
+[1.522s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2157, in shutdown
+[1.522s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2647, in finalize
+[1.522s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2200, in push
+[1.522s] AttributeError: '_io.TextIOWrapper' object has no attribute 'push'
+[1.525s] make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_introspection_c.dir/build.make:72: rosidl_typesupport_introspection_c/steady_msgs/msg/detail/write_car__rosidl_typesupport_introspection_c.h] 인터럽트
+[1.525s] make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_c.dir/build.make:70: rosidl_typesupport_c/steady_msgs/msg/write_car__type_support.cpp] 인터럽트
+[1.525s] make[1]: *** [CMakeFiles/Makefile2:327: CMakeFiles/steady_msgs__rosidl_typesupport_introspection_c.dir/all] 인터럽트
+[1.525s] make[1]: *** [CMakeFiles/Makefile2:411: CMakeFiles/steady_msgs__rosidl_typesupport_c.dir/all] 인터럽트
+[1.527s] make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_fastrtps_cpp.dir/build.make:72: rosidl_typesupport_fastrtps_cpp/steady_msgs/msg/detail/dds_fastrtps/write_car__type_support.cpp] 인터럽트
+[1.527s] make[1]: *** [CMakeFiles/Makefile2:384: CMakeFiles/steady_msgs__rosidl_typesupport_fastrtps_cpp.dir/all] 인터럽트
+[1.527s] make[2]: *** [CMakeFiles/steady_msgs__rosidl_typesupport_introspection_cpp.dir/build.make:72: rosidl_typesupport_introspection_cpp/steady_msgs/msg/detail/write_car__rosidl_typesupport_introspection_cpp.hpp] 인터럽트
+[1.527s] make[1]: *** [CMakeFiles/Makefile2:525: CMakeFiles/steady_msgs__rosidl_typesupport_introspection_cpp.dir/all] 인터럽트
+[1.527s] make: *** [Makefile:141: all] 인터럽트
+[1.529s] Invoked command in '/home/song/steadylab/src/build/steady_msgs' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/song/steadylab/src/build/steady_msgs -- -j20 -l20

@@ -1,0 +1,4 @@
+source;share/steadylab/local_setup.bash
+source;share/steadylab/local_setup.dsv
+source;share/steadylab/local_setup.sh
+source;share/steadylab/local_setup.zsh

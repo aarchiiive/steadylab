@@ -1,0 +1,46 @@
+[0.295s] Invoking command in '/home/song/steadylab/src/build/steadylab': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/song/steadylab/src/build/steadylab/prefix_override:/home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/song/steadylab/src/build/steadylab/build
+[0.403s] running develop
+[0.471s] Invoked command in '/home/song/steadylab/src/build/steadylab' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/song/steadylab/src/build/steadylab/prefix_override:/home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/song/steadylab/src/build/steadylab/build
+[0.472s] Invoking command in '/home/song/steadylab/src/steadylab': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/song/steadylab/src/build/steadylab/prefix_override:/home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/steadylab build --build-base /home/song/steadylab/src/build/steadylab/build install --record /home/song/steadylab/src/build/steadylab/install.log --install-scripts $base/lib/steadylab --single-version-externally-managed
+[0.581s] running egg_info
+[0.581s] writing ../build/steadylab/steadylab.egg-info/PKG-INFO
+[0.581s] writing dependency_links to ../build/steadylab/steadylab.egg-info/dependency_links.txt
+[0.581s] writing entry points to ../build/steadylab/steadylab.egg-info/entry_points.txt
+[0.581s] writing requirements to ../build/steadylab/steadylab.egg-info/requires.txt
+[0.581s] writing top-level names to ../build/steadylab/steadylab.egg-info/top_level.txt
+[0.599s] reading manifest file '../build/steadylab/steadylab.egg-info/SOURCES.txt'
+[0.600s] writing manifest file '../build/steadylab/steadylab.egg-info/SOURCES.txt'
+[0.600s] running build
+[0.600s] running build_py
+[0.600s] copying steadylab/main_status.py -> /home/song/steadylab/src/build/steadylab/build/lib/steadylab
+[0.600s] copying steadylab/keyboard_erp.py -> /home/song/steadylab/src/build/steadylab/build/lib/steadylab
+[0.600s] copying steadylab/comm.py -> /home/song/steadylab/src/build/steadylab/build/lib/steadylab
+[0.601s] running install
+[0.601s] running install_lib
+[0.601s] creating /home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages/steadylab
+[0.601s] copying /home/song/steadylab/src/build/steadylab/build/lib/steadylab/main_status.py -> /home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages/steadylab
+[0.601s] copying /home/song/steadylab/src/build/steadylab/build/lib/steadylab/keyboard_erp.py -> /home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages/steadylab
+[0.601s] copying /home/song/steadylab/src/build/steadylab/build/lib/steadylab/__init__.py -> /home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages/steadylab
+[0.601s] copying /home/song/steadylab/src/build/steadylab/build/lib/steadylab/comm.py -> /home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages/steadylab
+[0.601s] byte-compiling /home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages/steadylab/main_status.py to main_status.cpython-38.pyc
+[0.602s] byte-compiling /home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages/steadylab/keyboard_erp.py to keyboard_erp.cpython-38.pyc
+[0.603s] byte-compiling /home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages/steadylab/__init__.py to __init__.cpython-38.pyc
+[0.603s] byte-compiling /home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages/steadylab/comm.py to comm.cpython-38.pyc
+[0.603s] running install_data
+[0.603s] copying resource/steadylab -> /home/song/steadylab/src/install/steadylab/share/ament_index/resource_index/packages
+[0.603s] copying package.xml -> /home/song/steadylab/src/install/steadylab/share/steadylab
+[0.603s] running install_egg_info
+[0.604s] Copying ../build/steadylab/steadylab.egg-info to /home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages/steadylab-0.0.0-py3.8.egg-info
+[0.605s] running install_scripts
+[0.614s] Installing data_hub script to /home/song/steadylab/src/install/steadylab/lib/steadylab
+[0.614s] Installing depth script to /home/song/steadylab/src/install/steadylab/lib/steadylab
+[0.615s] Installing yolo script to /home/song/steadylab/src/install/steadylab/lib/steadylab
+[0.615s] Installing zed_depth script to /home/song/steadylab/src/install/steadylab/lib/steadylab
+[0.615s] Installing zed_image script to /home/song/steadylab/src/install/steadylab/lib/steadylab
+[0.615s] Installing zed_imu script to /home/song/steadylab/src/install/steadylab/lib/steadylab
+[0.615s] Installing zed_path_map script to /home/song/steadylab/src/install/steadylab/lib/steadylab
+[0.615s] Installing zed_pointcloud script to /home/song/steadylab/src/install/steadylab/lib/steadylab
+[0.615s] Installing zed_pose script to /home/song/steadylab/src/install/steadylab/lib/steadylab
+[0.615s] Installing zed_tf script to /home/song/steadylab/src/install/steadylab/lib/steadylab
+[0.615s] writing list of installed files to '/home/song/steadylab/src/build/steadylab/install.log'
+[0.627s] Invoked command in '/home/song/steadylab/src/steadylab' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/song/steadylab/src/build/steadylab/prefix_override:/home/song/steadylab/src/install/steadylab/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/steadylab build --build-base /home/song/steadylab/src/build/steadylab/build install --record /home/song/steadylab/src/build/steadylab/install.log --install-scripts $base/lib/steadylab --single-version-externally-managed

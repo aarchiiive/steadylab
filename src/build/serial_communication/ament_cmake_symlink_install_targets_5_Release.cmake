@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/song/steadylab/src/build/serial_communication/rosidl_generator_py/serial_communication/libserial_communication__python.so" "TARGETS" "serial_communication__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

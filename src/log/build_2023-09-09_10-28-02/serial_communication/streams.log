@@ -1,0 +1,145 @@
+[0.036s] Invoking command in '/home/song/steadylab/src/build/serial_communication': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/song/steadylab/src/build/serial_communication -- -j20 -l20
+[0.209s] [ 10%] Built target serial_communication__rosidl_generator_c
+[0.210s] [ 12%] Built target serial_communication__cpp
+[0.210s] [ 23%] Built target serial_communication__rosidl_typesupport_introspection_c
+[0.210s] [ 33%] Built target serial_communication__rosidl_typesupport_c
+[0.210s] [ 43%] Built target serial_communication__rosidl_typesupport_cpp
+[0.210s] [ 53%] Built target serial_communication__rosidl_typesupport_fastrtps_cpp
+[0.210s] [ 64%] Built target serial_communication__rosidl_typesupport_introspection_cpp
+[0.210s] [ 74%] Built target serial_communication__rosidl_typesupport_fastrtps_c
+[0.210s] [ 74%] Built target serial_communication
+[0.210s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[0.271s] ImportError in template '/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_msg.py.em': 
+[0.272s] 
+[0.272s] IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+[0.275s] 
+[0.275s] Importing the numpy C-extensions failed. This error can happen for
+[0.276s] many reasons, often due to issues with your setup or how NumPy was
+[0.276s] installed.
+[0.276s] 
+[0.276s] We have compiled some common reasons and troubleshooting tips at:
+[0.277s] 
+[0.277s]     https://numpy.org/devdocs/user/troubleshooting-importerror.html
+[0.277s] 
+[0.277s] Please note and check the following:
+[0.277s] 
+[0.277s]   * The Python version is: Python3.9 from "/home/song/anaconda3/bin/python3"
+[0.277s]   * The NumPy version is: "1.23.1"
+[0.277s] 
+[0.277s] and make sure that they are the versions you expect.
+[0.277s] Please carefully study the documentation linked above for further help.
+[0.277s] 
+[0.277s] Original error was: No module named 'numpy.core._multiarray_umath'
+[0.277s] 
+[0.278s] ImportError when expanding '_idl.py.em' into '/home/song/steadylab/src/build/serial_communication/rosidl_generator_py/serial_communication/msg/_write_car.py': 
+[0.278s] 
+[0.278s] IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+[0.278s] 
+[0.278s] Importing the numpy C-extensions failed. This error can happen for
+[0.278s] many reasons, often due to issues with your setup or how NumPy was
+[0.278s] installed.
+[0.278s] 
+[0.278s] We have compiled some common reasons and troubleshooting tips at:
+[0.278s] 
+[0.279s]     https://numpy.org/devdocs/user/troubleshooting-importerror.html
+[0.279s] 
+[0.279s] Please note and check the following:
+[0.279s] 
+[0.279s]   * The Python version is: Python3.9 from "/home/song/anaconda3/bin/python3"
+[0.279s]   * The NumPy version is: "1.23.1"
+[0.279s] 
+[0.279s] and make sure that they are the versions you expect.
+[0.279s] Please carefully study the documentation linked above for further help.
+[0.279s] 
+[0.279s] Original error was: No module named 'numpy.core._multiarray_umath'
+[0.279s] 
+[0.279s] Error processing idl file: /home/song/steadylab/src/build/serial_communication/rosidl_adapter/serial_communication/msg/WriteCar.idl
+[0.280s] Traceback (most recent call last):
+[0.280s]   File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/__init__.py", line 23, in <module>
+[0.280s]     from . import multiarray
+[0.280s]   File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/multiarray.py", line 10, in <module>
+[0.280s]     from . import overrides
+[0.280s]   File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/overrides.py", line 6, in <module>
+[0.280s]     from numpy.core._multiarray_umath import (
+[0.280s] ModuleNotFoundError: No module named 'numpy.core._multiarray_umath'
+[0.280s] 
+[0.280s] During handling of the above exception, another exception occurred:
+[0.280s] 
+[0.280s] Traceback (most recent call last):
+[0.281s]   File "/opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py", line 40, in <module>
+[0.281s]     sys.exit(main())
+[0.281s]   File "/opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py", line 36, in main
+[0.281s]     return generate_py(args.generator_arguments_file, args.typesupport_impls.split(';'))
+[0.281s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_py/generate_py_impl.py", line 61, in generate_py
+[0.281s]     generate_files(generator_arguments_file, mapping)
+[0.281s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 96, in generate_files
+[0.282s]     raise(e)
+[0.282s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 87, in generate_files
+[0.282s]     expand_template(
+[0.282s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 149, in expand_template
+[0.282s]     interpreter.string(template_content, template_path, locals=data)
+[0.282s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2391, in string
+[0.282s]     self.safe(scanner, True, locals)
+[0.282s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2401, in safe
+[0.282s]     self.parse(scanner, locals)
+[0.282s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2421, in parse
+[0.283s]     token.run(self, locals)
+[0.283s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1547, in run
+[0.283s]     self.subrun(info[0][1], interpreter, locals)
+[0.283s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1631, in subrun
+[0.283s]     token.run(interpreter, locals)
+[0.283s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1425, in run
+[0.283s]     interpreter.execute(self.code, locals)
+[0.283s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2596, in execute
+[0.283s]     _exec(statements, self.globals, locals)
+[0.283s]   File "<string>", line 2, in <module>
+[0.283s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 198, in _expand_template
+[0.284s]     interpreter.string(content, str(template_path), kwargs)
+[0.284s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2391, in string
+[0.284s]     self.safe(scanner, True, locals)
+[0.284s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2401, in safe
+[0.284s]     self.parse(scanner, locals)
+[0.284s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2421, in parse
+[0.284s]     token.run(self, locals)
+[0.284s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1425, in run
+[0.284s]     interpreter.execute(self.code, locals)
+[0.284s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2596, in execute
+[0.284s]     _exec(statements, self.globals, locals)
+[0.284s]   File "<string>", line 3, in <module>
+[0.285s]   File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/__init__.py", line 140, in <module>
+[0.286s]     from . import core
+[0.286s]   File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/__init__.py", line 49, in <module>
+[0.287s]     raise ImportError(msg)
+[0.288s] ImportError: 
+[0.289s] 
+[0.289s] IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+[0.289s] 
+[0.289s] Importing the numpy C-extensions failed. This error can happen for
+[0.289s] many reasons, often due to issues with your setup or how NumPy was
+[0.289s] installed.
+[0.289s] 
+[0.289s] We have compiled some common reasons and troubleshooting tips at:
+[0.289s] 
+[0.289s]     https://numpy.org/devdocs/user/troubleshooting-importerror.html
+[0.289s] 
+[0.289s] Please note and check the following:
+[0.289s] 
+[0.289s]   * The Python version is: Python3.9 from "/home/song/anaconda3/bin/python3"
+[0.289s]   * The NumPy version is: "1.23.1"
+[0.289s] 
+[0.289s] and make sure that they are the versions you expect.
+[0.289s] Please carefully study the documentation linked above for further help.
+[0.289s] 
+[0.289s] Original error was: No module named 'numpy.core._multiarray_umath'
+[0.289s] 
+[0.291s] Exception ignored in: <function Interpreter.__del__ at 0x7fcbda2e63a0>
+[0.291s] Traceback (most recent call last):
+[0.291s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2094, in __del__
+[0.291s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2157, in shutdown
+[0.291s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2647, in finalize
+[0.291s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2200, in push
+[0.291s] AttributeError: '_io.TextIOWrapper' object has no attribute 'push'
+[0.292s] make[2]: *** [serial_communication__py/CMakeFiles/serial_communication__py.dir/build.make:82: rosidl_generator_py/serial_communication/_serial_communication_s.ep.rosidl_typesupport_fastrtps_c.c] 오류 1
+[0.292s] make[1]: *** [CMakeFiles/Makefile2:553: serial_communication__py/CMakeFiles/serial_communication__py.dir/all] 오류 2
+[0.292s] make: *** [Makefile:141: all] 오류 2
+[0.292s] Invoked command in '/home/song/steadylab/src/build/serial_communication' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/song/steadylab/src/build/serial_communication -- -j20 -l20

@@ -1,0 +1,145 @@
+[0.040s] Invoking command in '/home/song/steadylab/src/build/zed_topic_benchmark_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(zed) /usr/bin/cmake --build /home/song/steadylab/src/build/zed_topic_benchmark_interfaces -- -j20 -l20
+[0.331s] ImportError in template '/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_msg.py.em': 
+[0.331s] 
+[0.331s] IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+[0.332s] 
+[0.332s] Importing the numpy C-extensions failed. This error can happen for
+[0.333s] many reasons, often due to issues with your setup or how NumPy was
+[0.334s] installed.
+[0.334s] 
+[0.335s] We have compiled some common reasons and troubleshooting tips at:
+[0.335s] 
+[0.335s]     https://numpy.org/devdocs/user/troubleshooting-importerror.html
+[0.335s] 
+[0.335s] Please note and check the following:
+[0.336s] 
+[0.337s]   * The Python version is: Python3.9 from "/home/song/anaconda3/bin/python3"
+[0.338s]   * The NumPy version is: "1.23.1"
+[0.340s] 
+[0.340s] and make sure that they are the versions you expect.
+[0.340s] Please carefully study the documentation linked above for further help.
+[0.340s] 
+[0.340s] Original error was: No module named 'numpy.core._multiarray_umath'
+[0.340s] 
+[0.340s] ImportError when expanding '_idl.py.em' into '/home/song/steadylab/src/build/zed_topic_benchmark_interfaces/rosidl_generator_py/zed_topic_benchmark_interfaces/msg/_benchmark_stats_stamped.py': 
+[0.341s] 
+[0.341s] IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+[0.341s] 
+[0.341s] Importing the numpy C-extensions failed. This error can happen for
+[0.341s] many reasons, often due to issues with your setup or how NumPy was
+[0.341s] installed.
+[0.341s] 
+[0.341s] We have compiled some common reasons and troubleshooting tips at:
+[0.341s] 
+[0.342s]     https://numpy.org/devdocs/user/troubleshooting-importerror.html
+[0.342s] 
+[0.342s] Please note and check the following:
+[0.342s] 
+[0.342s]   * The Python version is: Python3.9 from "/home/song/anaconda3/bin/python3"
+[0.342s]   * The NumPy version is: "1.23.1"
+[0.343s] 
+[0.343s] and make sure that they are the versions you expect.
+[0.343s] Please carefully study the documentation linked above for further help.
+[0.343s] 
+[0.343s] Original error was: No module named 'numpy.core._multiarray_umath'
+[0.345s] 
+[0.345s] Error processing idl file: /home/song/steadylab/src/build/zed_topic_benchmark_interfaces/rosidl_adapter/zed_topic_benchmark_interfaces/msg/BenchmarkStatsStamped.idl
+[0.345s] Traceback (most recent call last):
+[0.345s]   File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/__init__.py", line 23, in <module>
+[0.346s]     from . import multiarray
+[0.346s]   File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/multiarray.py", line 10, in <module>
+[0.346s]     from . import overrides
+[0.346s]   File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/overrides.py", line 6, in <module>
+[0.346s]     from numpy.core._multiarray_umath import (
+[0.346s] ModuleNotFoundError: No module named 'numpy.core._multiarray_umath'
+[0.346s] 
+[0.346s] During handling of the above exception, another exception occurred:
+[0.346s] 
+[0.346s] Traceback (most recent call last):
+[0.346s]   File "/opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py", line 40, in <module>
+[0.346s]     sys.exit(main())
+[0.346s]   File "/opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py", line 36, in main
+[0.346s]     return generate_py(args.generator_arguments_file, args.typesupport_impls.split(';'))
+[0.347s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_py/generate_py_impl.py", line 61, in generate_py
+[0.347s]     generate_files(generator_arguments_file, mapping)
+[0.347s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 96, in generate_files
+[0.347s]     raise(e)
+[0.347s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 87, in generate_files
+[0.347s]     expand_template(
+[0.347s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 149, in expand_template
+[0.347s]     interpreter.string(template_content, template_path, locals=data)
+[0.347s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2391, in string
+[0.347s]     self.safe(scanner, True, locals)
+[0.347s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2401, in safe
+[0.347s]     self.parse(scanner, locals)
+[0.347s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2421, in parse
+[0.348s]     token.run(self, locals)
+[0.348s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1547, in run
+[0.348s]     self.subrun(info[0][1], interpreter, locals)
+[0.348s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1631, in subrun
+[0.348s]     token.run(interpreter, locals)
+[0.348s] [  3%] Built target zed_topic_benchmark_interfaces__cpp
+[0.348s] [ 12%] Built target zed_topic_benchmark_interfaces__rosidl_generator_c
+[0.348s] [ 22%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_cpp
+[0.348s] [ 32%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_cpp
+[0.348s] [ 41%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.348s] [ 51%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_c
+[0.348s] [ 61%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_introspection_c
+[0.349s] [ 70%] Built target zed_topic_benchmark_interfaces__rosidl_typesupport_fastrtps_c
+[0.349s] [ 70%] Built target zed_topic_benchmark_interfaces
+[0.349s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[0.349s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1425, in run
+[0.349s]     interpreter.execute(self.code, locals)
+[0.349s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2596, in execute
+[0.349s]     _exec(statements, self.globals, locals)
+[0.349s]   File "<string>", line 2, in <module>
+[0.349s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 198, in _expand_template
+[0.349s]     interpreter.string(content, str(template_path), kwargs)
+[0.349s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2391, in string
+[0.349s]     self.safe(scanner, True, locals)
+[0.350s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2401, in safe
+[0.350s]     self.parse(scanner, locals)
+[0.350s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2421, in parse
+[0.350s]     token.run(self, locals)
+[0.350s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 1425, in run
+[0.350s]     interpreter.execute(self.code, locals)
+[0.350s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2596, in execute
+[0.350s]     _exec(statements, self.globals, locals)
+[0.350s]   File "<string>", line 3, in <module>
+[0.350s]   File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/__init__.py", line 140, in <module>
+[0.350s]     from . import core
+[0.350s]   File "/opt/ros/foxy/lib/python3.8/site-packages/numpy/core/__init__.py", line 49, in <module>
+[0.350s]     raise ImportError(msg)
+[0.351s] ImportError: 
+[0.351s] 
+[0.351s] IMPORTANT: PLEASE READ THIS FOR ADVICE ON HOW TO SOLVE THIS ISSUE!
+[0.351s] 
+[0.351s] Importing the numpy C-extensions failed. This error can happen for
+[0.351s] many reasons, often due to issues with your setup or how NumPy was
+[0.351s] installed.
+[0.351s] 
+[0.351s] We have compiled some common reasons and troubleshooting tips at:
+[0.351s] 
+[0.351s]     https://numpy.org/devdocs/user/troubleshooting-importerror.html
+[0.351s] 
+[0.351s] Please note and check the following:
+[0.352s] 
+[0.352s]   * The Python version is: Python3.9 from "/home/song/anaconda3/bin/python3"
+[0.352s]   * The NumPy version is: "1.23.1"
+[0.352s] 
+[0.352s] and make sure that they are the versions you expect.
+[0.352s] Please carefully study the documentation linked above for further help.
+[0.352s] 
+[0.352s] Original error was: No module named 'numpy.core._multiarray_umath'
+[0.352s] 
+[0.352s] Exception ignored in: <function Interpreter.__del__ at 0x7f29ff5423a0>
+[0.352s] Traceback (most recent call last):
+[0.352s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2094, in __del__
+[0.352s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2157, in shutdown
+[0.353s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2647, in finalize
+[0.353s]   File "/home/song/anaconda3/lib/python3.9/site-packages/em.py", line 2200, in push
+[0.353s] AttributeError: '_io.TextIOWrapper' object has no attribute 'push'
+[0.353s] make[2]: *** [zed_topic_benchmark_interfaces__py/CMakeFiles/zed_topic_benchmark_interfaces__py.dir/build.make:111: rosidl_generator_py/zed_topic_benchmark_interfaces/_zed_topic_benchmark_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c] 오류 1
+[0.353s] make[1]: *** [CMakeFiles/Makefile2:581: zed_topic_benchmark_interfaces__py/CMakeFiles/zed_topic_benchmark_interfaces__py.dir/all] 오류 2
+[0.353s] make: *** [Makefile:141: all] 오류 2
+[0.393s] Invoked command in '/home/song/steadylab/src/build/zed_topic_benchmark_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(zed) /usr/bin/cmake --build /home/song/steadylab/src/build/zed_topic_benchmark_interfaces -- -j20 -l20
