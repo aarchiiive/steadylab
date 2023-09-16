@@ -132,11 +132,11 @@ def detect(node, source="0", weights="/home/bg/ros2_ws/src/yo/yo/data/weights/yo
         t1 = time_synchronized()
         
         [pred, anchor_grid], seg, ll = model(img)
-        t2 = time_synchronized()
-        tw1 = time_synchronized()
+        # t2 = time_synchronized()
+        # tw1 = time_synchronized()
         pred = split_for_trace_model(pred, anchor_grid)
-        tw2 = time_synchronized()
-        t3 = time_synchronized()
+        # tw2 = time_synchronized()
+        # t3 = time_synchronized()
         pred = non_max_suppression(pred, conf_thres, iou_thres, classes=classes,
                                    agnostic=agnostic_nms)
         t4 = time_synchronized()
@@ -168,7 +168,7 @@ def detect(node, source="0", weights="/home/bg/ros2_ws/src/yo/yo/data/weights/yo
                         xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()
                         line = (cls, *xywh, conf) if save_conf else (cls, *xywh)
 
-            print(f'{s}Done. ({t2 - t1:.3f}s)')
+            # print(f'{s}Done. ({t2 - t1:.3f}s)')
             show_seg_result(im0, (da_seg_mask, ll_seg_mask_left, ll_seg_mask_right), img_shape=im0.shape[:2], is_demo=True)
 
             l = is_mask_empty(ll_seg_mask_left)
@@ -202,9 +202,9 @@ def detect(node, source="0", weights="/home/bg/ros2_ws/src/yo/yo/data/weights/yo
                 cv2.destroyAllWindows()
                 exit()
 
-        inf_time.update(t2 - t1, img.size(0))
-        nms_time.update(t4 - t3, img.size(0))
-        waste_time.update(tw2 - tw1, img.size(0))
+        # inf_time.update(t2 - t1, img.size(0))
+        # nms_time.update(t4 - t3, img.size(0))
+        # waste_time.update(tw2 - tw1, img.size(0))
 
     if source == "0":
         while True:

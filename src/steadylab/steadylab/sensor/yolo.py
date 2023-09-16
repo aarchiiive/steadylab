@@ -34,11 +34,11 @@ class Object(Node):
         self.bridge = CvBridge()
         self.processor = ImageProcessor("image", vis=False)
         
-        self._subscribers = {"image": self.create_subscription(Image, "/image", self.callback, qos)}
+        self._subscribers = {"image": self.create_subscription(Image, "/image", self.image_callback, qos)}
         self._publishers = {"yolo": self.create_publisher(BoundingBoxes, "/yolo", qos), # [cls, conf, x, y, w, h]
                             "direction": self.create_publisher(Int16, "/direction", qos),} # right : -1, straight : 0, left : 1
         
-    def callback(self, msg):
+    def image_callback(self, msg):
         img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgra8').astype(np.uint8)
         img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
         results = self.yolo.predict(img, imgsz=640, conf=self.conf)

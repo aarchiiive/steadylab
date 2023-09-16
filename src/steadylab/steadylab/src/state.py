@@ -69,7 +69,6 @@ class State(Node):
                 self.box["count"] += 1
 
     def depth_callback(self, msg):
-        print("DFSF")
         depth = self.bridge.imgmsg_to_cv2(msg, desired_encoding='32FC1')
         depth[np.isnan(depth)] = 0
         depth[np.isinf(depth)] = 0
@@ -89,6 +88,7 @@ class State(Node):
             self.finish = True
 
         self.box["count"] = 0
+        
 
 def main(args=None):
     rclpy.init(args=args)

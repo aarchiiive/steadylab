@@ -19,7 +19,7 @@ class DataHub(Node):
         self.data = {}
 
         for name, message in messages.items():
-            self.callbacks[name] = self.make_callback(name)
+            self.callbacks[name] = self.create_callback(name)
             self.processors[name] = message.processor
             self.data[name] = None
 
@@ -38,7 +38,7 @@ class DataHub(Node):
 
         print("Datahub Initialize...")
 
-    def make_callback(self, name):
+    def create_callback(self, name):
         def callback(msg):
             self.data[name] = msg
             getattr(self, f"pub_{name}").publish(msg)

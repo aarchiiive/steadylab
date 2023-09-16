@@ -30,16 +30,18 @@ setup(
             'zed_pointcloud = steadylab.zed.pointcloud:main',
             'zed_imu = steadylab.zed.imu:main',
             'zed_tf = steadylab.zed.tf:main',
+            
             'data_hub = steadylab.src.data_hub:main',
-            'yolo = steadylab.src.yolo:main',
-            'depth = steadylab.src.depth:main',
-            'state = steadylab.src.state:main',
             'serial = steadylab.src.serial:main',
             
-            'comm = steadylab.comm:main',
-            'keyboard_erp = steadylab.keyboard_erp:main',
-            'main_status = steadylab.main_status:main',
-
+            'yolo = steadylab.sensor.yolo:main',
+            'depth = steadylab.sensor.depth:main',
+            'state = steadylab.sensor.state:main',
+            'lane = steadylab.sensor.lane:main',
+            'location = steadylab.sensor.location:main',
+            
+            'steer = steadylab.tracker.steer:main',
+            
             # test
             'test_yolo = steadylab.test.yolo:main',
         ],                                                                                                                  
