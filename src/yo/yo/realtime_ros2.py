@@ -31,7 +31,7 @@ import numpy as np
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
-from serial_communication.msg import WriteCar  # 메시지 타입에 맞게 변경해주세요.
+from serial_communication.msg import WriteCar
 import sys
 import threading
 
@@ -91,7 +91,7 @@ def draw_grid(image, grid_size, color=(0, 255, 0), line_width=1):
 
 
 def detect(node, source="0", weights="/home/bg/ros2_ws/src/yo/yo/data/weights/yolopv2.pt",
-           img_size=256, conf_thres=0.3, iou_thres=0.45, device="0", save_conf=False,
+           img_size=256, conf_thres=0.3, iou_thres=0.5, device="0", save_conf=False,
            save_txt=False, nosave=False, classes=None, agnostic_nms=False,
            project="runs/detect", exist_ok=False):
     
@@ -125,28 +125,33 @@ def detect(node, source="0", weights="/home/bg/ros2_ws/src/yo/yo/data/weights/yo
         model(torch.zeros(1, 3, imgsz, imgsz).to(device).type_as(next(model.parameters())))  # run once
 
     t0 = time.time()
+    left_count = 0
+    right_count = 0
+    last_direction = 'a'
 
 
     def inference(img, im0, path):
+        nonlocal left_count, right_count, last_direction
         # Inference code
         t1 = time_synchronized()
         
         [pred, anchor_grid], seg, ll = model(img)
-        # t2 = time_synchronized()
-        # tw1 = time_synchronized()
+        t2 = time_synchronized()
+        tw1 = time_synchronized()
         pred = split_for_trace_model(pred, anchor_grid)
-        # tw2 = time_synchronized()
-        # t3 = time_synchronized()
+        tw2 = time_synchronized()
+        t3 = time_synchronized()
         pred = non_max_suppression(pred, conf_thres, iou_thres, classes=classes,
                                    agnostic=agnostic_nms)
         t4 = time_synchronized()
 
         # da_seg_mask = driving_area_mask(seg, grid_size=10, grid_range=(0,5,0,10))
         da_seg_mask = driving_area_mask(seg)
-        ll_seg_mask_left = lane_line_mask(ll, grid_size=11, grid_range=(6,10,3,4))
-        ll_seg_mask_light_left = lane_line_mask(ll, grid_size=11, grid_range=(6,10,2,3))
-        ll_seg_mask_right = lane_line_mask(ll, grid_size=11, grid_range=(6,10,7,8))
-        ll_seg_mask_light_right = lane_line_mask(ll, grid_size=11, grid_range=(6,10,7,8))
+        ll_seg_mask_left = lane_line_mask(ll, grid_size=11, grid_range=(8,10,1,3))
+        ll_seg_mask_light_left = lane_line_mask(ll, grid_size=11, grid_range=(7,9,2,3))
+        ll_seg_mask_right = lane_line_mask(ll, grid_size=11, grid_range=(7,9,7,8))
+        ll_seg_mask_light_right = lane_line_mask(ll, grid_size=11, grid_range=(7,9,6,8))
+        
 
         steer = 0
         for i, det in enumerate(pred):
@@ -168,29 +173,62 @@ def detect(node, source="0", weights="/home/bg/ros2_ws/src/yo/yo/data/weights/yo
                         xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()
                         line = (cls, *xywh, conf) if save_conf else (cls, *xywh)
 
-            # print(f'{s}Done. ({t2 - t1:.3f}s)')
+            print(f'{s}Done. ({t2 - t1:.3f}s)')
             show_seg_result(im0, (da_seg_mask, ll_seg_mask_left, ll_seg_mask_right), img_shape=im0.shape[:2], is_demo=True)
 
             l = is_mask_empty(ll_seg_mask_left)
-            light_l = is_mask_empty(ll_seg_mask_light_left)
             r = is_mask_empty(ll_seg_mask_right)
 
-
             if l == False and r == True:
-                steer = 1200
+                steer = 1900
                 print("left, 1200")
+                left_count += 1
+                right_count = 0
+                last_direction = 'l'
             elif l == True and r == False:
-                steer = -1200
+                steer = -1900
                 print("right, -1200")
-            elif light_l == False:
-                steer = 600
-                print("light left, 600")
+                right_count += 1
+                left_count = 0
+                last_direction = 'r'
             else:
-                steer = 0
-                print("0 steer")
+                if last_direction == 'l':
+                    steer = -600
+                    print("left, 1200 based on last direction")
+                elif last_direction == 'r':
+                    steer = 600
+                    print("right, -1200 based on last direction")
+                else:
+                    steer = 0
+                    print("0 steer")
+                left_count = 0
+                right_count = 0
+
+            # print('left counts : ', left_count)
+            # print("right counts : ", right_count)
+
+            if left_count >= 20:
+                print("left continued===================")
+                print("left continued===================")
+                print("left continued===================")
+                print("left continued===================")
+                print("left continued===================")
+                print("left continued===================")
+                print("left continued===================")
+                left_count = 0
+            elif right_count >= 20:
+                print("right continued==================")
+                print("right continued==================")
+                print("right continued==================")
+                print("right continued==================")
+                print("right continued==================")
+                print("right continued==================")
+                print("right continued==================")
+                right_count = 0
+
             
 
-            speed = 40
+            speed = 60
 
             node.pub_serial(speed, steer)
             img_with_grid = draw_grid(im0, grid_size=11)
@@ -202,9 +240,9 @@ def detect(node, source="0", weights="/home/bg/ros2_ws/src/yo/yo/data/weights/yo
                 cv2.destroyAllWindows()
                 exit()
 
-        # inf_time.update(t2 - t1, img.size(0))
-        # nms_time.update(t4 - t3, img.size(0))
-        # waste_time.update(tw2 - tw1, img.size(0))
+        inf_time.update(t2 - t1, img.size(0))
+        nms_time.update(t4 - t3, img.size(0))
+        waste_time.update(tw2 - tw1, img.size(0))
 
     if source == "0":
         while True:
@@ -238,4 +276,3 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-

@@ -28,7 +28,6 @@ from serial_communication.msg import ReadCar, WriteCar
 MAX = 18
 PI = np.pi
 
-
 class SerialNode(Node):
     def __init__(self):
         super().__init__('serial')

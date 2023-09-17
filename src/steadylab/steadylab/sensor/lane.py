@@ -26,19 +26,19 @@ class Lane(Node):
                  iou_thres: float = 0.45,
                  qos: int = 5, 
                  frame_rate: int = 10,
-                 mode: str = "auto", 
                  fp16: bool = True):
         super().__init__("lane")
+        
         self.frame_rate = frame_rate
         self.imgsz = (imgsz, imgsz)
         self.conf_thres = conf_thres
         self.iou_thres = iou_thres
         self.gn = None
         self.grid_size = 11
-        self.grid_range = {"left": (6,10,3,4),
-                           "light_left": (6,10,2,3),
-                           "right": (6,10,7,8),
-                           "light_right": (6,10,7,8)}
+        self.grid_range = {"left": (8,10,1,3),
+                           "light_left": (7,9,2,3),
+                           "right": (7,9,7,8),
+                           "light_right": (7,9,6,8)}
         
         self.bridge = CvBridge()
         self.model = torch.jit.load("src/steadylab/weights/lane/yolopv2.pt")
@@ -48,40 +48,30 @@ class Lane(Node):
         
         if fp16: self.model.half()
         
-        self.steer = 0
-        self.steers = {"left": -1200,
-                       "right": 1200,
-                       "straight": 0}
+        self.steer = Int64()
+        self.steers = {"left": -1900, "right": 1900, "straight": 0}
+        self.counts = {"left": 0, "right": 0}
         self.directions = ["left", "light_left", "right", "light_right"]
         
         self._publishers = {"center": self.create_publisher(Int64, "/center", qos),
                             "steer": self.create_publisher(Int64, "/lane_steer", qos),}
         self._subscribers = {"image": self.create_subscription(Image, "/image", self.image_callback, qos)}
         
-        if mode == "auto":
-            self.mode = Mode.Auto
-        elif mode == "test":
-            self.mode = Mode.Test
-            self.video = "src/steadylab/videos/pre.mp4"
-            self.cap = cv2.VideoCapture(self.video)
-            self.timer = self.create_timer(0.01, self.callback)
+        
+        # self.timer = self.create_timer(0.01, self.timer_callback)
             
         # self.get_logger().info(self.mode)
             
-    def callback(self):
-        if self.mode == Mode.Auto:
-            pass
-        elif self.mode == Mode.Test:
-            for _ in range(self.frame_rate):
-                _, frame = self.cap.read()
-                        
-            res = self.infer(frame)
-            
-            cv2.imshow("lane", res)
-            cv2.waitKey(1)
+    # def timer_callback(self):
+    #     for _ in range(self.frame_rate):
+    #         _, frame = self.cap.read()
+                    
+    #     res = self.infer(frame)
+        
+    #     cv2.imshow("lane", res)
+    #     cv2.waitKey(1)
             
     def image_callback(self, msg: Image):
-        # if self.mode == Mode.Auto:
         img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgra8').astype(np.uint8)
         img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
         res = self.infer(img)
@@ -98,6 +88,8 @@ class Lane(Node):
             mask = self.get_mask(seg, lane)
             
             self.predict(mask)
+            self._publishers["steer"].publish(self.steer)
+            
             # self.visualize(lane)
 
             # xywh = self.detect(img, preds)
@@ -129,13 +121,13 @@ class Lane(Node):
         empty = {x: self.is_empty(mask[x]) for x in self.directions}
 
         if not empty["left"] and empty["right"]:
-            self.steer = self.steers["right"]
+            self.steer.data = self.steers["right"]
         elif empty["left"] and not empty["right"]:
-            self.steer = self.steers["left"]
+            self.steer.data = self.steers["left"]
         elif not empty["light_left"]:
-            self.steer = self.steers["right"] // 2
+            self.steer.data = self.steers["right"] // 2
         else:
-            self.steer = self.steers["straight"]
+            self.steer.data = self.steers["straight"]
         
         self.print_steer()
         
@@ -143,12 +135,12 @@ class Lane(Node):
         return mask.sum() == 0
 
     def print_steer(self):
-        if self.steer < 0:
-            print(f"left {self.steer}")
-        elif self.steer > 0:
-            print(f"right {self.steer}")
+        if self.steer.data < 0:
+            print(f"left {self.steer.data}")
+        elif self.steer.data > 0:
+            print(f"right {self.steer.data}")
         else:
-            print(f"straight {self.steer}")
+            print(f"straight {self.steer.data}")
 
     def get_mask(self, seg: torch.Tensor, lane: torch.Tensor):
         return {"driving_area": driving_area_mask(seg),

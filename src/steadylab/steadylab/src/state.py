@@ -18,10 +18,11 @@ from sensor_msgs.msg import Image
 
 """
 class State(Node):
-    def __init__(self, qos=1):
+    def __init__(self, 
+                 qos: int = 5):
         super().__init__("state")
         self.size = (640, 360)
-        self.steer_amount = {"left": -100 ,
+        self.steer_amount = {"left": -100,
                              "right": 100}
         self.window = [1/8, 2/8, 3/8, 4/8, 5/8, 6/8, 7/8, 1]
         self.ratio = [0.9, 0.75, 0.6, 0.45, 0.4, 0.3, 0.2, 0]

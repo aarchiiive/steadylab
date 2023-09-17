@@ -38,12 +38,15 @@ setup(
             'depth = steadylab.sensor.depth:main',
             'state = steadylab.sensor.state:main',
             'lane = steadylab.sensor.lane:main',
-            'location = steadylab.sensor.location:main',
+            'pose = steadylab.sensor.pose:main',
             
-            'steer = steadylab.tracker.steer:main',
+            'traffic_light = steadylab.object.traffic_light:main',
+            
+            'steer = steadylab.planning.steer:main',
             
             # test
             'test_yolo = steadylab.test.yolo:main',
+            'player = steadylab.test.player:main',
         ],                                                                                                                  
     },
 )
