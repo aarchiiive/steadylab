@@ -21,7 +21,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'realtime_bev_ros2 = yo.realtime_bev_ros2:main',
+            'seg_lane_realtime = yo.seg_lane_realtime:main',
         ],
     },
 )

@@ -376,8 +376,8 @@ def show_seg_result(img, result, palette=None, img_shape=(480,640), is_demo=Fals
         color_area = np.zeros((result[0].shape[0], result[0].shape[1], 3), dtype=np.uint8)
         color_area[result[0] == 1] = [0, 0, 255] # Drivable area
         color_area[result[1] == 1] = [0, 255, 255] # left lane
-        color_area[result[2] == 1] = [0, 255, 255] # strong left lane
-        # color_area[result[3] == 1] = [0, 255, 255] # right lane
+        color_area[result[2] == 1] = [0, 255, 255]
+        # color_area[result[3] == 1] = [0, 255, 0] # middle
         # color_area[result[4] == 1] = [0, 255, 0] # strong right lane
         # color_area[result[5] == 1] = [225,0,0]
         color_seg = color_area
@@ -994,4 +994,3 @@ def draw_grid(image, grid_size, color=(0, 255, 0), line_width=1):
         cv2.line(img, (0, y), (img.shape[1], y), color, line_width)
 
     return img
-

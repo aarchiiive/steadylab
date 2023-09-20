@@ -90,7 +90,7 @@ def draw_grid(image, grid_size, color=(0, 255, 0), line_width=1):
     return img
 
 
-def detect(node, source="0", weights="/home/bg/ros2_ws/src/yo/yo/data/weights/yolopv2.pt",
+def detect(node, source="0", weights="src/yo/yo/data/weights/yolopv2.pt",
            img_size=256, conf_thres=0.3, iou_thres=0.5, device="0", save_conf=False,
            save_txt=False, nosave=False, classes=None, agnostic_nms=False,
            project="runs/detect", exist_ok=False):
@@ -147,10 +147,11 @@ def detect(node, source="0", weights="/home/bg/ros2_ws/src/yo/yo/data/weights/yo
 
         # da_seg_mask = driving_area_mask(seg, grid_size=10, grid_range=(0,5,0,10))
         da_seg_mask = driving_area_mask(seg)
-        ll_seg_mask_left = lane_line_mask(ll, grid_size=11, grid_range=(8,10,1,3))
+        ll_seg_mask_left = lane_line_mask(ll, grid_size=11, grid_range=(9,10,1,3))
         ll_seg_mask_light_left = lane_line_mask(ll, grid_size=11, grid_range=(7,9,2,3))
-        ll_seg_mask_right = lane_line_mask(ll, grid_size=11, grid_range=(7,9,7,8))
+        ll_seg_mask_right = lane_line_mask(ll, grid_size=11, grid_range=(8,10,7,8))
         ll_seg_mask_light_right = lane_line_mask(ll, grid_size=11, grid_range=(7,9,6,8))
+        # mid_seg_mask = lane_line_mask(ll, grid_size=11, grid_range=(8,10,5,6))
         
 
         steer = 0
@@ -178,6 +179,7 @@ def detect(node, source="0", weights="/home/bg/ros2_ws/src/yo/yo/data/weights/yo
 
             l = is_mask_empty(ll_seg_mask_left)
             r = is_mask_empty(ll_seg_mask_right)
+            # m = is_mask_empty(mid_seg_mask)
 
             if l == False and r == True:
                 steer = 1900
@@ -186,17 +188,22 @@ def detect(node, source="0", weights="/home/bg/ros2_ws/src/yo/yo/data/weights/yo
                 right_count = 0
                 last_direction = 'l'
             elif l == True and r == False:
-                steer = -1900
+                steer = -1200
                 print("right, -1200")
                 right_count += 1
                 left_count = 0
                 last_direction = 'r'
+            
+            # elif m == False:
+            #     steer = 300
+            #     print('middle')
+
             else:
                 if last_direction == 'l':
-                    steer = -600
+                    steer = -0
                     print("left, 1200 based on last direction")
                 elif last_direction == 'r':
-                    steer = 600
+                    steer = 0
                     print("right, -1200 based on last direction")
                 else:
                     steer = 0
