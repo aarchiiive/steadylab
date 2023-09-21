@@ -22,6 +22,7 @@ setup(
     entry_points={
         'console_scripts': [
             'seg_lane_realtime = yo.seg_lane_realtime:main',
+            'complex_planning = yo.complex_planning:main'
         ],
     },
 )

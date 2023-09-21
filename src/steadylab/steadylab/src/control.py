@@ -30,7 +30,7 @@ class Control(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    s = Serial()
+    s = Control()
     rclpy.spin(s)  # Continuously process callbacks.
 
     s.destroy_node()

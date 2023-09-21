@@ -46,7 +46,7 @@ from yo.utils.utils import \
 class CarController(Node):
     def __init__(self):
         super().__init__('car_controller')
-        self.erp_pub = self.create_publisher(WriteCar, 'car_control', 10)
+        self.erp_pub = self.create_publisher(WriteCar, 'lane_control', 10)
         self.erp = WriteCar()
 
     def pub_serial(self, speed, steer):
