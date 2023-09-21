@@ -6,7 +6,7 @@ from rclpy.node import Node
 
 sys.path.append("src/steadylab/steadylab")
 
-from core.message import Int64
+from core.message import Int64, Int16
 from missions.mission import Mission
 
 class Cruising(Mission):
@@ -16,7 +16,7 @@ class Cruising(Mission):
                  qos: int = 5):
         super().__init__("cruising", queue_size, min_duration, qos)
         
-        self._subscribers = {"steer": self.create_subscription(Int64, "/lane_steer", self.steer_callback, qos)}
+        self._subscribers = {"steer": self.create_subscription(Int16, "/lane_steer", self.steer_callback, qos)}
     
     def steer_callback(self, msg: Int64):
         self.reset()

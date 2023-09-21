@@ -14,25 +14,22 @@ class YOLOPlanning(Node):
         self.erp = WriteCar()
 
     def pub_serial(self, go, speed, steer):
-        self.erp.complex = go
+        self.erp.complex = go #True false
         self.erp.write_speed = speed
         self.erp.write_steer = steer
         self.erp_pub.publish(self.erp)
 
 model = YOLO('complex1.pt')  # pretrained YOLOv8n model
-# model = YOLO('yolov8n.pt')  # pretrained YOLOv8n model
 
 
 results = model.predict("z2.jpg", show=True)
-# results = model.predict("twodog.jpg", show=True)
 
 go = False
 steer = 0
 speed = 60
 
 
-#xyxy, first xy(top left), second xy(bottom right)
-# if]
+# Priority
 # x -> y -> stop_line -> speedbump -> z -> speed_sign
 '''
 speed_sign : 0
