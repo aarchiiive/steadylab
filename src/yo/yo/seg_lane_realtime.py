@@ -31,7 +31,8 @@ import numpy as np
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
-from serial_communication.msg import WriteCar
+# from serial_communication.msg import WriteCar
+from steady_msgs.msg import WriteCar
 import sys
 import threading
 
