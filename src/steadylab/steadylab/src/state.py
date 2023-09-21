@@ -37,9 +37,7 @@ class State(Node):
         self.erp = WriteCar()
 
         self._subscribers = {"yolo": self.create_subscription(BoundingBoxes, "/yolo", self.yolo_callback, qos),
-                             "depth": self.create_subscription(Image, "/depth", self.depth_callback, qos),
-                             "lane_control": self.create_subscription(WriteCar, "/lane_control", self.lane_callback, qos),
-                             "complex_control":self.create_subscription(WriteCar, "complex_control", self.complex_callback, qos)}
+                             "depth": self.create_subscription(Image, "/depth", self.depth_callback, qos)}
         self._publishers = {"steer": self.create_publisher(WriteCar, "/control", qos)}
         
         self.timer = {"steer": self.create_timer(0.5, self.steer_callback)}
@@ -49,14 +47,6 @@ class State(Node):
                     "count": 0}
         self.raw_depth = None
 
-    def lane_callback(self, data):
-        self.speed = data.write_speed
-        self.steer = data.write_steer
-
-    def complex_callback(self, data):
-        self.go = data.complex
-        self.speed = data.write_speed
-        self.steer = data.write_steer
 
     def yolo_callback(self, msg):
         cls, conf, x, y, w, h = msg.data
