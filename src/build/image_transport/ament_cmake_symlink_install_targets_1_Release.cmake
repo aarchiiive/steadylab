@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/song/steadylab/src/build/image_transport/list_transports" "/home/song/steadylab/src/build/image_transport/republish" "TARGETS" "list_transports" "republish" "RUNTIME_DESTINATION" "lib/image_transport")

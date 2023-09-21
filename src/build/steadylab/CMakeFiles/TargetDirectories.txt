@@ -1,9 +1,0 @@
-/home/song/steadylab/src/build/steadylab/CMakeFiles/install/strip.dir
-/home/song/steadylab/src/build/steadylab/CMakeFiles/install/local.dir
-/home/song/steadylab/src/build/steadylab/CMakeFiles/edit_cache.dir
-/home/song/steadylab/src/build/steadylab/CMakeFiles/test.dir
-/home/song/steadylab/src/build/steadylab/CMakeFiles/install.dir
-/home/song/steadylab/src/build/steadylab/CMakeFiles/list_install_components.dir
-/home/song/steadylab/src/build/steadylab/CMakeFiles/rebuild_cache.dir
-/home/song/steadylab/src/build/steadylab/CMakeFiles/steadylab_uninstall.dir
-/home/song/steadylab/src/build/steadylab/CMakeFiles/uninstall.dir

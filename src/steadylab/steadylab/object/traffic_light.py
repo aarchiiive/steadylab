@@ -1,3 +1,5 @@
+from typing import Tuple
+
 import sys
 import time
 
@@ -14,12 +16,14 @@ from core.message import Bool, Int8
 class TrafficLight(Node):
     def __init__(self, 
                  queue_size: int = 5,
-                 y_thres: float = 0.15,
+                 x_thres: Tuple[float, float] = (0.3, 0.7),
+                 y_thres: Tuple[float, float] = (0, 0.15),
                  init_freq: int = 1,
                  qos: int = 5):
         super().__init__("traffic_light")
         
         self.queue_size = queue_size
+        self.x_thres = x_thres
         self.y_thres = y_thres
         self.init_freq = init_freq
         self.queue = deque([None for _ in range(queue_size)])
@@ -58,7 +62,8 @@ class TrafficLight(Node):
                     print("delivery")
                     pass
                 else:
-                    if xywhn[1] < self.y_thres:
+                    if self.x_thres[0] < xywhn[0] < self.x_thres[1] and \
+                        self.y_thres[0] < xywhn[1] < self.y_thres[1]:
                         print(f"{name} closed")
                         if name == "4_red":
                             self.publish_state(-1)

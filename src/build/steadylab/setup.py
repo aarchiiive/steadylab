@@ -1,1 +1,0 @@
-/home/song/steadylab/src/steadylab/setup.py

@@ -13,7 +13,7 @@ from core.message import Int64, Int8, Bool
 
 class Steer(Node):
     def __init__(self, init_ratio=0.2, window_size=8, ratio=[0.4, 0.8], qos=1) -> None:
-        super().__init__("steer_handler")
+        super().__init__("steer")
         self.init_ratio = init_ratio
         self.steer = 0  # - : left + : right
         
@@ -25,13 +25,17 @@ class Steer(Node):
         self._publishers = {"steer": self.create_publisher(Int64, "/steer", qos)}
         self._subscribers = {
             "state":
-                {
-                    "yolo": self.create_subscription(Int8, "/traffic_state", self.traffic_callback, qos),
-                    "obstacle": self.create_subscription(Int8, "/obstacle_state", self.obstacle_callback, qos),
-                }
+            {
+                "yolo": self.create_subscription(Int8, "/traffic_state", self.traffic_callback, qos),
+                "obstacle": self.create_subscription(Int8, "/obstacle_state", self.obstacle_callback, qos),
+            },
+            "steer":
+            {
+                "depth": self.create_subscription(Int64, "/depth_steer", self.depth_callback, qos),
+                "lane": self.create_subscription(Int64, "/lane_steer", self.lane_callback, qos),
+                "obstacle": self.create_subscription(Int64, "/obstacle_steer", self.depth_callback, qos),
+            }
         }
-        self._subscribers = {"depth": self.create_subscription(Int64, "/depth_steer", self.depth_callback, qos),
-                             "lane": self.create_subscription(Int64, "/lane_steer", self.lane_callback, qos)}
 
         self.timer = self.create_timer(0.2, self.callback)
     

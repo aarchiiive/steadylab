@@ -1,5 +1,0 @@
-[0.558s] Invoking command in '/home/song/steadylab/src/build/zed_tutorial_depth': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/song/steadylab/install/yo:/home/song/steadylab/install/steadylab:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/song/steadylab/src/build/zed_tutorial_depth -- -j20 -l20
-[0.713s] [35m[1mScanning dependencies of target zed_tutorial_depth[0m
-[0.772s] [ 50%] [32mBuilding CXX object CMakeFiles/zed_tutorial_depth.dir/src/zed_depth_sub_tutorial.cpp.o[0m
-[8.100s] [100%] [32m[1mLinking CXX executable zed_tutorial_depth[0m
-[8.198s] [100%] Built target zed_tutorial_depth

@@ -31,7 +31,7 @@ from core.processor import ImageProcessor
 """
 
 class Object(Node):
-    def __init__(self, webcam=0, qos=5, conf=0.8):
+    def __init__(self, webcam: int = 0, qos: int = 5, conf: float = 0.8):
         super().__init__("yolo")
         self.conf = conf
         
@@ -42,7 +42,6 @@ class Object(Node):
         # self.yolo = YOLO("src/steadylab/weights/rubber_cone/best.pt")
         
         self.bridge = CvBridge()
-        self.processor = ImageProcessor("image", vis=False)
         
         self.msg = {"bboxes": BoundingBoxes()}
         self._publishers = {"yolo": self.create_publisher(BoundingBoxes, "/yolo", qos)} # [cls, conf, x, y, w, h]

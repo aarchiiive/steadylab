@@ -15,8 +15,8 @@ from core.message import Image
 class Depth(Node):
     def __init__(self, qos: int = 5):
         super().__init__("depth")
-        self._subscriber = {"depth": self.create_subscription(msg["depth"].msg_type, msg["depth"].topic, self.depth_callback, qos)}
         self.bridge = CvBridge()
+        self._subscriber = {"depth": self.create_subscription(msg["depth"].msg_type, msg["depth"].topic, self.depth_callback, qos)}
 
     def depth_callback(self, msg: Image):
         depth = self.bridge.imgmsg_to_cv2(msg, desired_encoding='32FC1')
@@ -32,11 +32,11 @@ class Depth(Node):
 def main(args=None):
     rclpy.init(args=args)
                                       
-    subscriber = Depth()
+    depth = Depth()
                                                                           
-    rclpy.spin(subscriber)
+    rclpy.spin(depth)
 
-    subscriber.destroy_node()
+    depth.destroy_node()
     rclpy.shutdown()
     cv2.destroyAllWindows()
 

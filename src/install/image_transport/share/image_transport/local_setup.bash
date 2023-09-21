@@ -1,1 +1,0 @@
-/home/song/steadylab/src/build/image_transport/ament_cmake_environment_hooks/local_setup.bash

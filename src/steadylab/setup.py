@@ -32,15 +32,19 @@ setup(
             'zed_tf = steadylab.zed.tf:main',
             
             'data_hub = steadylab.src.data_hub:main',
+            'state = steadylab.src.state:main',
+            'pre_state = steadylab.src.pre.state:main',
             'serial = steadylab.src.serial:main',
+            'recorder = steadylab.src.recorder:main',
+            'control = steadylab.src.control:main',
             
             'yolo = steadylab.sensor.yolo:main',
             'depth = steadylab.sensor.depth:main',
-            'state = steadylab.sensor.state:main',
             'lane = steadylab.sensor.lane:main',
             'pose = steadylab.sensor.pose:main',
             
             'traffic_light = steadylab.object.traffic_light:main',
+            'general_obstacle = steadylab.object.general_obstacle:main',
             
             'steer = steadylab.planning.steer:main',
             

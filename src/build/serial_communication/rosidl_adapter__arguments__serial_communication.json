@@ -1,7 +1,0 @@
-{
-  "package_name": "serial_communication",
-  "non_idl_tuples": [
-    "/home/song/steadylab/src/serial_communication:msg/WriteCar.msg",
-    "/home/song/steadylab/src/serial_communication:msg/ReadCar.msg"
-  ]
-}

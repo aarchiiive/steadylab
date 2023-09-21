@@ -38,7 +38,7 @@ class State(Node):
 
         self._subscribers = {"yolo": self.create_subscription(BoundingBoxes, "/yolo", self.yolo_callback, qos),
                              "depth": self.create_subscription(Image, "/depth", self.depth_callback, qos)}
-        self._publishers = {"steer": self.create_publisher(WriteCar, "/car_control", qos)}
+        self._publishers = {"steer": self.create_publisher(WriteCar, "/control", qos)}
         
         self.timer = {"steer": self.create_timer(0.5, self.steer_callback)}
         self.box = {"center": (0, 0),

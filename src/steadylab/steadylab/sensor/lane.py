@@ -24,6 +24,7 @@ class Lane(Node):
                  imgsz: int = 256, 
                  conf_thres: float = 0.3,
                  iou_thres: float = 0.45,
+                 webcam: int = 1,
                  qos: int = 5, 
                  frame_rate: int = 10,
                  fp16: bool = True):
@@ -58,18 +59,18 @@ class Lane(Node):
         self._subscribers = {"image": self.create_subscription(Image, "/image", self.image_callback, qos)}
         
         
-        # self.timer = self.create_timer(0.01, self.timer_callback)
+        self.cap = cv2.VideoCapture(webcam)
+        self.timer = self.create_timer(0.01, self.timer_callback)
             
         # self.get_logger().info(self.mode)
             
-    # def timer_callback(self):
-    #     for _ in range(self.frame_rate):
-    #         _, frame = self.cap.read()
-                    
-    #     res = self.infer(frame)
-        
-    #     cv2.imshow("lane", res)
-    #     cv2.waitKey(1)
+    def timer_callback(self):
+        ret, frame = self.cap.read()
+        if ret:
+            res = self.infer(frame)
+            
+            cv2.imshow("lane", res)
+            cv2.waitKey(1)
             
     def image_callback(self, msg: Image):
         img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgra8').astype(np.uint8)

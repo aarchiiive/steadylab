@@ -1,7 +1,11 @@
-# *.png
-# *.jpg
+*.png
+*.jpg
 *.mp4
 *.avi
+*.zip
+*.db3
+*.db3-shm
+*.db3-wal
 
 *.pt
 *.pth

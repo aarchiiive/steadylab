@@ -13,14 +13,8 @@ def generate_launch_description():
     # create and return launch description object
     return LaunchDescription(
         [
-          #   Node(package="steadylab",
-          #        executable="serial"),
             Node(package="steadylab",
-                 executable="depth"),
-          #   Node(package="steadylab",
-          #        executable="yolo"),
-            Node(package="steadylab",
-                 executable="data_hub"),
+                 executable="control"),
             Node(package="steadylab",
                  executable="state"),
         ]

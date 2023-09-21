@@ -11,7 +11,7 @@ class Serial():
         self.steer = 0
     
         self.sub_speed_steer = rclpy.Subscriber('serial', ErpWrite, self.callback, queue_size=1)
-        self.erp_sub= rclpy.Subscriber('erp_read', ErpRead, self.callback, queue_size=1)
+        self.erp_sub = rclpy.Subscriber('erp_read', ErpRead, self.callback, queue_size=1)
 
         self.erp_pub = rclpy.Publisher("erp_write", ErpWrite, queue_size=1)
         self.erp = ErpWrite()
