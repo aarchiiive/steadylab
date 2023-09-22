@@ -18,7 +18,7 @@ class Cruising(Mission):
         
         self._subscribers = {"steer": self.create_subscription(Int16, "/lane_steer", self.steer_callback, qos)}
     
-    def steer_callback(self, msg: Int64):
+    def steer_callback(self, msg: Int16):
         self.reset()
         if self.running:
             self.steer = msg.data
