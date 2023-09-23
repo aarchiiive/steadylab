@@ -3,6 +3,7 @@ from typing import Dict
 import os
 import sys
 
+import cv2
 import numpy as np
 from cv_bridge import CvBridge   
 
@@ -13,17 +14,9 @@ from steady_msgs.msg import ReadCar, WriteCar, BoundingBox, BoundingBoxes
 
 sys.path.append("src/steadylab/steadylab")
 
-from core.message import String
-from missions.mission import Mission
-from missions.cruising import Cruising
-from missions.right_turn import RightTurn
-from missions.complex_area import ComplexArea
-from missions.uturn import UTurn
-from missions.tollgate import Tollgate
-from missions.tunnel import Tunnel
-from missions.static_obstacle import StaticObstacle
-from missions.dynamic_obstacle import DynamicObstacle
+from core.message import String, Bool, Int64
 from planning.pre.driving_mode import DrivingMode
+
 
 """
 
@@ -35,134 +28,107 @@ class State(Node):
     def __init__(self, 
                  qos: int = 5):
         super().__init__("state")
+        self.qos = qos
+        
         self.erp = WriteCar()
         self.objects = BoundingBoxes()
+        
         self.driving_mode = DrivingMode.CRUISING
+        
         self.speed = 60
         self.steer = 0
         self._steer = {"left": -1900, 
                        "straight": 0, 
                        "right": -1900}
         
-        self.missions: Dict[DrivingMode, Mission] = {DrivingMode.CRUISING: Cruising(),
-                                                     DrivingMode.RIGHT_TURN: RightTurn(),
-                                                     DrivingMode.COMPLEX_AREA: ComplexArea(),
-                                                     DrivingMode.UTURN: UTurn(),
-                                                     DrivingMode.TOLLGATE: Tollgate(),
-                                                     DrivingMode.TUNNEL: Tunnel(),
-                                                     DrivingMode.STATIC_OBSTACLE: StaticObstacle(),
-                                                     DrivingMode.DYNAMIC_OBSTACLE: DynamicObstacle()}
-        
         self._publishers = {"steer": self.create_publisher(WriteCar, "/control", qos)}
-        self._subscribers = {"yolo": self.create_subscription(BoundingBoxes, "/yolo", self.yolo_callback, qos),
-                             "place": self.create_subscription(String, "/place", self.place_callback, qos)}
+        self._create_subscribers()
         self.timer = self.create_timer(0.1, self.callback)
     
-    def yolo_callback(self, msg: BoundingBoxes):
-        self.objects = msg
-        
-    def place_callback(self, msg: String):
-        self.place = msg.data
-        
+    def _create_subscribers(self):
+        missions = ["complex_area", "uturn", "tollgate", "tunnel", "general_obstacle", "static_obstacle", "dynamic_obstacle"]
+
+        self._subscribers = {}
+        self.missions = {}
+        for m in missions:
+            running = f"{m}"
+            steer = f"{m}_steer"
+            self._subscribers[running] = self.create_subscription(Bool, running, getattr(self, f"_{running}"), self.qos)
+            self._subscribers[steer] = self.create_subscription(Int64, steer, getattr(self, f"_{steer}"), self.qos)
+            self.missions[m] = {"running": False, "steer": 0}
+            
+
     def callback(self):
         self.update()
-        
-        if self.driving_mode == DrivingMode.CRUISING:
-            self.steer = self.missions[self.driving_mode].steer
-        elif self.driving_mode == DrivingMode.RIGHT_TURN:
-            pass
-        elif self.driving_mode == DrivingMode.COMPLEX_AREA:
-            pass
-        elif self.driving_mode == DrivingMode.UTURN:
-            pass
-        elif self.driving_mode == DrivingMode.TOLLGATE:
-            pass
-        elif self.driving_mode == DrivingMode.TUNNEL:
-            pass
-        elif self.driving_mode == DrivingMode.STATIC_OBSTACLE:
-            pass
-        elif self.driving_mode == DrivingMode.DYNAMIC_OBSTACLE:
-            pass
+        for k, v in self.missions.items():
+            if k == "tollgate":
+                print(f"{k} : {v}")
     
     def update(self):
-        if self._right_turn():
-            self.driving_mode = DrivingMode.RIGHT_TURN
-        elif self._complex_area():
-            self.driving_mode = DrivingMode.COMPLEX_AREA
-        elif self._uturn():
-            self.driving_mode = DrivingMode.UTURN
-        elif self._tollgate():
-            self.driving_mode = DrivingMode.TOLLGATE
-        elif self._tunnel():
-            self.driving_mode = DrivingMode.TUNNEL
-        elif self._static_obstacle():
-            self.driving_mode = DrivingMode.STATIC_OBSTACLE
-        elif self._dynamic_obstacle():
-            self.driving_mode = DrivingMode.DYNAMIC_OBSTACLE
-        else:
-            self.driving_mode = DrivingMode.CRUISING
-
-        for mode, mission in self.missions.items():
-            if mode != self.driving_mode:
-                mission.running = False
-                
-    def process_erp_msg(self, speed: int = None, steer: int = None):
+        pass
+    
+    def process_steer(self, speed: int = None, steer: int = None):
         self.erp.write_speed = self.speed if speed is None else speed
         self.erp.write_steer = max(-1900, min(1900, steer))
     
     def combine_steer(self):
         pass
+
+    def _complex_area(self, msg: Bool):
+        # Callback for complex_area topic
+        self.missions["complex_area"]["running"] = msg.data
+
+    def _uturn(self, msg: Bool):
+        # Callback for uturn topic
+        self.missions["uturn"]["running"] = msg.data
+
+    def _tollgate(self, msg: Bool):
+        # Callback for tollgate topic
+        self.missions["tollgate"]["running"] = msg.data
+
+    def _tunnel(self, msg: Bool):
+        # Callback for tunnel topic
+        self.missions["tunnel"]["running"] = msg.data
+
+    def _general_obstacle(self, msg: Bool):
+        # Callback for static_obstacle topic
+        self.missions["general_obstacle"]["running"] = msg.data
+
+    def _static_obstacle(self, msg: Bool):
+        # Callback for static_obstacle topic
+        self.missions["static_obstacle"]["running"] = msg.data
+
+    def _dynamic_obstacle(self, msg: Bool):
+        # Callback for dynamic_obstacle topic
+        self.missions["dynamic_obstacle"]["running"] = msg.data
+
+    def _complex_area_steer(self, msg: Int64):
+        # Callback for complex_area_steer topic
+        self.missions["complex_area"]["steer"] = msg.data
+
+    def _uturn_steer(self, msg: Int64):
+        # Callback for uturn_steer topic
+        self.missions["uturn"]["steer"] = msg.data
+
+    def _tollgate_steer(self, msg: Int64):
+        # Callback for tollgate_steer topic
+        self.missions["tollgate"]["steer"] = msg.data
+
+    def _tunnel_steer(self, msg: Int64):
+        # Callback for tunnel_steer topic
+        self.missions["tunnel"]["steer"] = msg.data
+
+    def _general_obstacle_steer(self, msg: Int64):
+        # Callback for static_obstacle_steer topic
+        self.missions["general_obstacle"]["steer"] = msg.data
     
-    # operate based on the driving mode
-    def cruising(self) -> None:
-        pass
-    
-    def right_turn(self) -> None:
-        pass
-    
-    def complex_area(self) -> None:
-        pass
-    
-    def uturn(self) -> None:
-        pass
-    
-    def tollgate(self) -> None:
-        pass
-    
-    def tunnel(self) -> None:
-        pass
-    
-    def tunnel(self) -> None:
-        pass
-    
-    def tunnel(self) -> None:
-        pass
-    
-    # recognize places
-    def _cruising(self) -> bool:
-        pass
-    
-    def _right_turn(self) -> bool:
-        return self.missions[DrivingMode.RIGHT_TURN].entered
-    
-    def _complex_area(self) -> bool:
-        pass
-    
-    def _uturn(self) -> bool:
-        pass
-    
-    def _tollgate(self) -> bool:
-        pass
-    
-    def _tunnel(self) -> bool:
-        pass
-    
-    def _static_obstacle(self) -> bool:
-        pass
-    
-    def _dynamic_obstacle(self) -> bool:
-        pass
-    
+    def _static_obstacle_steer(self, msg: Int64):
+        # Callback for static_obstacle_steer topic
+        self.missions["static_obstacle"]["steer"] = msg.data
+
+    def _dynamic_obstacle_steer(self, msg: Int64):
+        # Callback for dynamic_obstacle_steer topic
+        self.missions["dynamic_obstacle"]["steer"] = msg.data
     
     
 def main(args=None):
@@ -174,6 +140,7 @@ def main(args=None):
 
     state.destroy_node()
     rclpy.shutdown()
+    cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     main()

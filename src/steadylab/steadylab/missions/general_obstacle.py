@@ -12,7 +12,6 @@ from rclpy.node import Node
 
 sys.path.append("src/steadylab/steadylab")
 
-from messages.data_hub import data_hub_messages as msg
 from core.message import Image, Int64
 
 
@@ -26,7 +25,7 @@ class GeneralObstacle(Node):
                        (int(self.w*(1 - p)), int(self.h*m)),
                        (int(self.w*(1 - q)), self.h*n),
                        (int(self.w*q), self.h*n),]
-        self.polygon = Polygon(self.points)
+        self.inner = Polygon(self.points)
         
         self.thres = 4.0
         

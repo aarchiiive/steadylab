@@ -15,7 +15,6 @@ from steady_msgs.msg import BoundingBox, BoundingBoxes
 sys.path.append("src/steadylab/steadylab")
 
 from core.message import Image, Int16
-from core.processor import ImageProcessor
 
 """
 [traffic_lights]
@@ -31,14 +30,12 @@ from core.processor import ImageProcessor
 """
 
 class Object(Node):
-    def __init__(self, webcam: int = 0, qos: int = 5, conf: float = 0.8):
+    def __init__(self, webcam: int = 0, qos: int = 5, conf: float = 0.5):
         super().__init__("yolo")
         self.conf = conf
-        
         self.classes = None
-        self.left_indexes = list(range(6)) # traffic_mode
 
-        self.yolo = YOLO("src/steadylab/weights/traffic_lights/last.pt")
+        self.yolo = YOLO("src/steadylab/weights/230922/best.pt")
         # self.yolo = YOLO("src/steadylab/weights/rubber_cone/best.pt")
         
         self.bridge = CvBridge()
@@ -50,10 +47,12 @@ class Object(Node):
     def image_callback(self, msg: Image):
         img = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgra8').astype(np.uint8)
         img = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
-        results = self.yolo.predict(img, imgsz=640, conf=self.conf, half=True)
+        results = self.yolo.predict(img, imgsz=640, conf=self.conf, half=True, augment=True)
         
         if self.classes is None: self.classes = results[0].names
 
+        print(self.classes)
+        
         for res in results:
             bboxes = []
             for b in res.boxes:
@@ -62,7 +61,9 @@ class Object(Node):
                 bbox.name = results[0].names[bbox.cls]
                 bbox.conf = b.conf[0].item()
                 bbox.xywh = array.array('f', b.xywh[0].detach().cpu().numpy())
+                bbox.xyxy = array.array('f', b.xyxy[0].detach().cpu().numpy())
                 bbox.xywhn = array.array('f', b.xywhn[0].detach().cpu().numpy())
+                bbox.xyxyn = array.array('f', b.xyxyn[0].detach().cpu().numpy())
                 bboxes.append(bbox)
 
             self.msg["bboxes"].boxes = bboxes

@@ -32,12 +32,14 @@ class Cruising(Mission):
 def main(args=None):
     rclpy.init(args=args)
                                       
-    cruising = Cruising()
+    node = Cruising()
                                                                           
-    rclpy.spin(cruising)
+    rclpy.spin(node)
 
-    cruising.destroy_node()
+    node.destroy_node()
     rclpy.shutdown()
+    
+    return node
 
 if __name__ == "__main__":
     main()

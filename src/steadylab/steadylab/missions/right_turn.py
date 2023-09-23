@@ -6,6 +6,8 @@ from collections import deque
 import rclpy
 from rclpy.node import Node
 
+import cv2
+
 from steady_msgs.msg import BoundingBox, BoundingBoxes
 
 sys.path.append("src/steadylab/steadylab")
@@ -34,4 +36,19 @@ class RightTurn(Mission):
         if self.queue.count(self.place) >= int(0.8*len(self.queue)):
             self.running = True
             self.last = time.time()
-            
+
+def main(args=None):
+    rclpy.init(args=args)
+                                      
+    node = RightTurn()
+                                                                          
+    rclpy.spin(node)
+
+    node.destroy_node()
+    rclpy.shutdown()
+    cv2.destroyAllWindows()
+    
+    return node
+
+if __name__ == "__main__":
+    main()

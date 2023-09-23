@@ -23,6 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            # zed
             'zed_image = steadylab.zed.image:main',
             'zed_depth = steadylab.zed.depth:main',
             'zed_pose = steadylab.zed.pose:main',
@@ -31,6 +32,7 @@ setup(
             'zed_imu = steadylab.zed.imu:main',
             'zed_tf = steadylab.zed.tf:main',
             
+            # src
             'data_hub = steadylab.src.data_hub:main',
             'state = steadylab.src.state:main',
             'pre_state = steadylab.src.pre.state:main',
@@ -38,14 +40,26 @@ setup(
             'recorder = steadylab.src.recorder:main',
             'control = steadylab.src.control:main',
             
+            # missions
+            'cruising = steadylab.missions.cruising:main',
+            'complex_area = steadylab.missions.complex_area:main',
+            'uturn = steadylab.missions.uturn:main',
+            'tollgate = steadylab.missions.tollgate:main',
+            'tunnel = steadylab.missions.tunnel:main',
+            'general_obstacle = steadylab.object.general_obstacle:main',
+            'static_obstacle = steadylab.object.static_obstacle:main',
+            'dynamic_obstacle = steadylab.object.dynamic_obstacle:main',
+            
+            # sensors
             'yolo = steadylab.sensor.yolo:main',
             'depth = steadylab.sensor.depth:main',
             'lane = steadylab.sensor.lane:main',
             'pose = steadylab.sensor.pose:main',
             
+            # objects & obstacles
             'traffic_light = steadylab.object.traffic_light:main',
-            'general_obstacle = steadylab.object.general_obstacle:main',
             
+            # planning
             'steer = steadylab.planning.steer:main',
             
             # test
