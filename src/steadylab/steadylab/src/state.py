@@ -32,7 +32,7 @@ class State(Node):
 
         self.start = False
         self.finish = False
-        self.speed = 50
+        self.speed = 60
         self.steer = 0
         self.erp = WriteCar()
 
@@ -46,6 +46,7 @@ class State(Node):
                     "points": None,
                     "count": 0}
         self.raw_depth = None
+
 
     def yolo_callback(self, msg):
         cls, conf, x, y, w, h = msg.data

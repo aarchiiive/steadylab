@@ -31,9 +31,11 @@ import numpy as np
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
-from serial_communication.msg import WriteCar
+# from serial_communication.msg import WriteCar
+from steady_msgs.msg import WriteCar
 import sys
 import threading
+from std_msgs.msg import Int64
 
 # Conclude setting / general reprocessing / plots / metrices / datasets
 from yo.utils.utils import \
@@ -46,11 +48,15 @@ from yo.utils.utils import \
 class CarController(Node):
     def __init__(self):
         super().__init__('car_controller')
-        self.erp_pub = self.create_publisher(WriteCar, 'car_control', 10)
+        self.erp_pub = self.create_publisher(WriteCar, 'lane_steer', 10)
         self.erp = WriteCar()
 
-    def pub_serial(self, speed, steer):
-        self.erp.write_speed = speed
+    # def pub_serial(self, speed, steer):
+    #     self.erp.write_speed = speed
+    #     self.erp.write_steer = steer
+    #     self.erp_pub.publish(self.erp)
+
+    def pub_serial(self, steer):
         self.erp.write_steer = steer
         self.erp_pub.publish(self.erp)
 
@@ -237,7 +243,8 @@ def detect(node, source="0", weights="src/yo/yo/data/weights/yolopv2.pt",
 
             speed = 60
 
-            node.pub_serial(speed, steer)
+            # node.pub_serial(speed, steer)
+            node.pub_serial(steer)
             img_with_grid = draw_grid(im0, grid_size=11)
 
             cv2.imshow('Detection', img_with_grid)

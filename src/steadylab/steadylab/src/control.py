@@ -9,7 +9,7 @@ class Control(Node):
         super().__init__('control')
         
         qos = QoSProfile(depth=1)
-        self.speed = 0
+        self.speed = 60
         self.steer = 0
 
         self.erp_sub = self.create_subscription(WriteCar, '/control', self.callback, 1)
@@ -30,7 +30,7 @@ class Control(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    s = Serial()
+    s = Control()
     rclpy.spin(s)  # Continuously process callbacks.
 
     s.destroy_node()
