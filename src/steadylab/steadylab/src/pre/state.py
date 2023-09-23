@@ -36,17 +36,17 @@ class State(Node):
         self.driving_mode = DrivingMode.CRUISING
         
         self.speed = 60
-        self.steer = 0
+        self.steer = Int64()
         self._steer = {"left": -1900, 
                        "straight": 0, 
                        "right": -1900}
         
-        self._publishers = {"steer": self.create_publisher(WriteCar, "/control", qos)}
+        self._publishers = {"steer": self.create_publisher(Int64, "/control", qos)}
         self._create_subscribers()
         self.timer = self.create_timer(0.1, self.callback)
     
     def _create_subscribers(self):
-        missions = ["complex_area", "uturn", "tollgate", "tunnel", "general_obstacle", "static_obstacle", "dynamic_obstacle"]
+        missions = ["cruising", "complex_area", "uturn", "tollgate", "tunnel", "general_obstacle", "static_obstacle", "dynamic_obstacle"]
 
         self._subscribers = {}
         self.missions = {}
@@ -59,13 +59,14 @@ class State(Node):
             
 
     def callback(self):
-        self.update()
-        for k, v in self.missions.items():
-            if k == "tollgate":
-                print(f"{k} : {v}")
+        # self.update()
+        # for k, v in self.missions.items():
+        #     if k == "tollgate":
+        #         print(f"{k} : {v}")
+        self.steer.data = self.missions["cruising"]["steer"]
+        print(self.steer)
+        self._publishers["steer"].publish(self.steer)
     
-    def update(self):
-        pass
     
     def process_steer(self, speed: int = None, steer: int = None):
         self.erp.write_speed = self.speed if speed is None else speed
@@ -73,7 +74,11 @@ class State(Node):
     
     def combine_steer(self):
         pass
-
+    
+    def _cruising(self, msg: Bool):
+        # Callback for complex_area topic
+        self.missions["cruising"]["running"] = msg.data
+        
     def _complex_area(self, msg: Bool):
         # Callback for complex_area topic
         self.missions["complex_area"]["running"] = msg.data
@@ -102,6 +107,10 @@ class State(Node):
         # Callback for dynamic_obstacle topic
         self.missions["dynamic_obstacle"]["running"] = msg.data
 
+    def _cruising_steer(self, msg: Int64):
+        # Callback for complex_area topic
+        self.missions["cruising"]["steer"] = msg.data
+        
     def _complex_area_steer(self, msg: Int64):
         # Callback for complex_area_steer topic
         self.missions["complex_area"]["steer"] = msg.data

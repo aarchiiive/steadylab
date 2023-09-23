@@ -6,7 +6,7 @@ from rclpy.node import Node
 
 sys.path.append("src/steadylab/steadylab")
 
-from core.message import Int64, Int16
+from core.message import Int64, Int16, Bool
 from missions.mission import Mission
 
 class Cruising(Mission):
@@ -15,19 +15,14 @@ class Cruising(Mission):
                  min_duration: float = 2.0,
                  qos: int = 5):
         super().__init__("cruising", queue_size, min_duration, qos)
-        
-        self._subscribers = {"steer": self.create_subscription(Int16, "/lane_steer", self.steer_callback, qos)}
+        self._publishers = {"steer": self.create_publisher(Int64, "/cruising_steer", qos),
+                            "running": self.create_publisher(Bool, "/cruising", qos)}
+        self._subscribers = {"steer": self.create_subscription(Int64, "/lane_steer", self.steer_callback, qos)}
     
-    def steer_callback(self, msg: Int16):
+    def steer_callback(self, msg: Int64):
         self.reset()
-        if self.running:
-            self.steer = msg.data
+        self._publishers["steer"].publish(Int64(data=msg.data))
     
-    def run(self):
-        self.running = True
-        self.last = time.time()
-        return self.steer
-        
         
 def main(args=None):
     rclpy.init(args=args)

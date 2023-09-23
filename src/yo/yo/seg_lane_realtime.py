@@ -47,9 +47,9 @@ from yo.utils.utils import \
 
 class CarController(Node):
     def __init__(self):
-        super().__init__('car_controller')
-        self.erp_pub = self.create_publisher(WriteCar, 'lane_steer', 10)
-        self.erp = WriteCar()
+        super().__init__('lane')
+        self.erp_pub = self.create_publisher(Int64, 'lane_steer', 10)
+        self.erp = Int64()
 
     # def pub_serial(self, speed, steer):
     #     self.erp.write_speed = speed
@@ -57,7 +57,7 @@ class CarController(Node):
     #     self.erp_pub.publish(self.erp)
 
     def pub_serial(self, steer):
-        self.erp.write_steer = steer
+        self.erp.data = steer
         self.erp_pub.publish(self.erp)
 
 
@@ -96,7 +96,7 @@ def draw_grid(image, grid_size, color=(0, 255, 0), line_width=1):
     return img
 
 
-def detect(node, source="0", weights="src/yo/yo/data/weights/yolopv2.pt",
+def detect(node, source=2, weights="src/yo/yo/data/weights/yolopv2.pt",
            img_size=256, conf_thres=0.3, iou_thres=0.5, device="0", save_conf=False,
            save_txt=False, nosave=False, classes=None, agnostic_nms=False,
            project="runs/detect", exist_ok=False):
@@ -119,8 +119,8 @@ def detect(node, source="0", weights="src/yo/yo/data/weights/yolopv2.pt",
 
     # Set Dataloader
     vid_path, vid_writer = None, None
-    if source == "0":  # 카메라 입력 체크
-        cap = cv2.VideoCapture(2)
+    if source:  # 카메라 입력 체크
+        cap = cv2.VideoCapture(source)
         cap.set(cv2.CAP_PROP_AUTOFOCUS, 2)
         if not cap.isOpened():
             raise IOError("Cannot open webcam")
@@ -163,8 +163,8 @@ def detect(node, source="0", weights="src/yo/yo/data/weights/yolopv2.pt",
         steer = 0
         for i, det in enumerate(pred):
             p = Path(path)
-            if source != "0":
-                frame = getattr(dataset, 'frame', 0)
+            # if source != "0":
+            #     frame = getattr(dataset, 'frame', 0)
 
             s = '%gx%g ' % img.shape[2:]
             gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]
@@ -246,7 +246,8 @@ def detect(node, source="0", weights="src/yo/yo/data/weights/yolopv2.pt",
             # node.pub_serial(speed, steer)
             node.pub_serial(steer)
             img_with_grid = draw_grid(im0, grid_size=11)
-
+            h, w, _ = img_with_grid.shape
+            img_with_grid = cv2.resize(img_with_grid, (w // 2, h // 2))
             cv2.imshow('Detection', img_with_grid)
             if cv2.waitKey(1) == ord('q'):
                 if cap:
@@ -258,7 +259,7 @@ def detect(node, source="0", weights="src/yo/yo/data/weights/yolopv2.pt",
         nms_time.update(t4 - t3, img.size(0))
         waste_time.update(tw2 - tw1, img.size(0))
 
-    if source == "0":
+    if source:
         while True:
             path = "webcam_frame"
             ret, im0 = cap.read()
@@ -269,9 +270,9 @@ def detect(node, source="0", weights="src/yo/yo/data/weights/yolopv2.pt",
             img = torch.from_numpy(img).permute(2, 0, 1).float().div(255.0).unsqueeze(0).to(device).type_as(
                 next(model.parameters()))
             inference(img, im0, path)
-    else:
-        for path, img, im0s, vid_cap in dataset:
-            inference(img, im0s, path)
+    # else:
+    #     for path, img, im0s, vid_cap in dataset:
+    #         inference(img, im0s, path)
 
     print('inf : (%.4fs/frame)   nms : (%.4fs/frame)' % (inf_time.avg, nms_time.avg))
     print(f'Done. ({time.time() - t0:.3f}s)')
